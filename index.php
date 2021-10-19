@@ -23,8 +23,8 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <ul class="login">
-            <li><a href="http://13.244.135.7/login.html">Login</a></li>
-            <li><a href="http://13.244.135.7/signup.html">Sign up</a></li>
+            <li><a href="login.php">Login</a></li>
+            <li><a href="signup.php">Sign up</a></li>
         </ul>
     </header>
     <div class="banner">
