@@ -15,7 +15,7 @@
         <input type="password" placeholder="Password">
         <input type="submit" name="Submit">
         <div class="switch">
-            <span>Don't you have an account? <a href="signup.html">Create Account</a></span>
+            <span>Don't you have an account? <a href="signup.php">Create Account</a></span>
         </div>
     </form>
 </body>
