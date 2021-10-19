@@ -35,7 +35,7 @@
 			there will be a list of project ideas, there will be no need to come up 
 			with a new idea, but you are not limited if you want to. 
             </p>
-            <a href="about.html">Read More</a>
+            <a href="about.php">Read More</a>
         </div>
         <img src="images/img.png" class="image">
     </div>
