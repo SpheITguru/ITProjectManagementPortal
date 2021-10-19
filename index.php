@@ -16,11 +16,11 @@
     <header>
         <a href="#" class="logo">IT Portal</a>
         <ul class="navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about.php">About</a></li>
             
             <li><a href="#">Dashboard</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
         </ul>
         <ul class="login">
             <li><a href="login.php">Login</a></li>
