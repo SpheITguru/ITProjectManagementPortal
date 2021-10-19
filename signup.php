@@ -23,7 +23,7 @@
         </div>
         <input type="submit" name="Submit">
         <div class="switch">
-            <span>Do you have an account? <a href="login.html">Login</a></span>
+            <span>Do you have an account? <a href="login.php">Login</a></span>
         </div>
     </form>
 </body>
