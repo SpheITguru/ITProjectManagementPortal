@@ -46,8 +46,8 @@
     
     <form action = "signup.php" method = "post">
         <h1>Sign Up</h1>
-        <input type="text" name="fname" placeholder="Firstname">
-        <input type="text" name="lname" placeholder="Lastname">
+        <input type="text" name="firstname" placeholder="Firstname">
+        <input type="text" name="lastname" placeholder="Lastname">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="cpassword" placeholder="Confirm Password">
