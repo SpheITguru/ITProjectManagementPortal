@@ -4,7 +4,7 @@ $host = $_ENV["DB_HOST"];
 $username = $_ENV["DB_USER"];
 $password = $_ENV["DB_PASSWORD"];
 
-$db_name = "sigmadb";
+$db_name = "projectdb";
 
 $conn = new mysqli($host, $username, $password);
 
