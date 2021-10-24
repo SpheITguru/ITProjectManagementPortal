@@ -43,7 +43,7 @@
 </head>
 <body>
     
-    <form action = "register.php" method = "post">
+    <form action = "signup.php" method = "post">
         <h1>Sign Up</h1>
         <input type="text" placeholder="Firstname">
         <input type="text" placeholder="Lastname">
