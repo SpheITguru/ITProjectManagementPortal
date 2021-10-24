@@ -44,7 +44,7 @@
 </head>
 <body>
     
-    <form action = "signup.php" method = "post">
+    <form action = "signup.php" method = "POST">
         <h1>Sign Up</h1>
         <input type="text" name="firstname" placeholder="Firstname">
         <input type="text" name="lastname" placeholder="Lastname">
@@ -56,7 +56,7 @@
             <input type="radio" id="lecture" name="role"><label for="lecture">Lecture</label>
             <input type="radio" id="sponsor" name="role"><label for="sponsor">Sponsor</label>
         </div>
-        <input type="submit" name="Submit">
+        <input type="submit" name="submit">
         <div class="switch">
             <span>Do you have an account? <a href="login.php">Login</a></span>
         </div>
