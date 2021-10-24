@@ -4,7 +4,8 @@
 
     if(isset($_POST['submit']))
     {
-        $username = mysqli_real_escape_string($con, $_POST['username']);
+        $fname = mysqli_real_escape_string($con, $_POST['firstname']);
+        $lname = mysqli_real_escape_string($con, $_POST['lastname']);
         $email = mysqli_real_escape_string($con, $_POST['email']);
         $password = mysqli_real_escape_string($con, $_POST['password']);
         $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
@@ -16,7 +17,7 @@
         }else 
         {
             $pass=md5($password);
-            $sql = "insert into users (username, email, password) values ('$username', '$email', '$pass')";
+            $sql = "insert into users (fname, lname, email, password, role) values ('$fname', '$lname', '$email', '$pass', $role)";
             $result = mysqli_query($con, $sql);
             
             if($result)
@@ -45,11 +46,11 @@
     
     <form action = "signup.php" method = "post">
         <h1>Sign Up</h1>
-        <input type="text" placeholder="Firstname">
-        <input type="text" placeholder="Lastname">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <input type="password" placeholder="Confirm Password">
+        <input type="text" name="fname" placeholder="Firstname">
+        <input type="text" name="lname" placeholder="Lastname">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="cpassword" placeholder="Confirm Password">
         <div>
             <input type="radio" id="student" name="role"><label for="student">Student</label>
             <input type="radio" id="lecture" name="role"><label for="lecture">Lecture</label>
