@@ -8,6 +8,7 @@
         $email = mysqli_real_escape_string($con, $_POST['email']);
         $password = mysqli_real_escape_string($con, $_POST['password']);
         $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
+        $role = mysqli_real_escape_string($con, $_POST['role']);
 
         if($password!=$cpassword)
         {
@@ -42,7 +43,7 @@
 </head>
 <body>
     
-    <form>
+    <form action = "register.php" method = "post">
         <h1>Sign Up</h1>
         <input type="text" placeholder="Firstname">
         <input type="text" placeholder="Lastname">
