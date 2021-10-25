@@ -45,7 +45,7 @@ require_once('connection.php');
         echo '</script>';
     }
     }
-    if(isset($_SESSION["email"])){
+    if(isset($_SESSION["email"]== $row['email'])){
         header("Location:dashboard.php");
     }
 ?>
