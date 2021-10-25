@@ -27,27 +27,17 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['submit'])){       
-
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
-    $row  = mysqli_fetch_array($select);
-        
-    $_SESSION["email"] = $_POST['email'];
-    $_SESSION["pass"] = $_POST['password'];
-    $pass=md5($_SESSION["pass"]);
-        
-    if(is_array($row)) {
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["pass"] = $row['pass'];
-    }   else {
-        echo '<script type = "text/javascript">';
-        echo 'alert("Invalid Email or Password!");';
-        echo 'window.location.href = "login.php" ';
-        echo '</script>';
+    if(isset($_POST['submit'])){
+    $query = "SELECT * FROM users";
+        $result = mysqli_query($query);
     }
-    }
-    if(isset($_SESSION["email"])){
-        header("Location:dashboard.php");
+    if(!$result) die ("Database access failed: " . mysqli_error());
+    $rows = mysqli_num_rows($result);
+    for ($j = 0; $j < $rows; ++$j)
+    {
+        echo 'Name: ' . mysqli_result($result,$j,'fname')  . '<br />';
+        echo 'Surname: ' . mysqli_result($result,$j,'lname')  . '<br />';
+        echo 'email: ' . mysqli_result($result,$j,'email')  . '<br />';
     }
 ?>
 </body>
