@@ -4,8 +4,8 @@ $username = $_ENV["DB_USER"];
 $password = $_ENV["DB_PASSWORD"];
 $db_name = "projectdb";
 
-mysqli_connect($host,$username,$password);
-mysqli_select_db($db_name);
+mysql_connect($host,$username,$password);
+mysql_select_db($db_name);
 
 if(isset($_POST['email'])){
     $email=$_POST['email'];
@@ -13,8 +13,8 @@ if(isset($_POST['email'])){
     
     $sql="select * from users where email='".$email."'AND pass='".$password."' limit 1";
     
-    $result=mysqli_query($sql);
-    if(mysqli_num_rows($result)==1){
+    $result=mysql_query($sql);
+    if(mysql_num_rows($result)==1){
         echo "You have Successfully logged in";
         exit();
     }
