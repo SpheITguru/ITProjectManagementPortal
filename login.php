@@ -29,15 +29,15 @@ require_once('connection.php');
     
 <?php
     if (isset($_POST['submit'])){
-        $email = $_POST['email'];
-        $pass = $_POST['password'];
+        $_SESSION["email"] = $_POST['email'];
+        $_SESSION["pass"] = $_POST['password'];
 
     $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
 
     if(is_array($row)) {
-        $email = $row['email'];
-        $pass = $row['pass'];
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
