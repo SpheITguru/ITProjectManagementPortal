@@ -31,12 +31,12 @@ require_once('connection.php');
         $email = $_POST['email'];
         $pass = $_POST['password'];
 
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '".$email."' AND pass = '".$pass."' ");
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
 
     if(is_array($row)) {
-        $_SESSION["email"] == $row['email'];
-        $_SESSION["pass"] == $row['pass'];
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
