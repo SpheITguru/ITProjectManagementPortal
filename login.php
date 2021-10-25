@@ -22,7 +22,7 @@ $conn =  mysqli_connect($host, $username, $password,$db_name);
 </head>
 <body>
     
-    <form method="POST" action="#">
+    <form method="POST" action="dashboard.php">
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
