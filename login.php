@@ -18,37 +18,45 @@ require_once('connection.php');
     
     <form method="POST" action="login.php">
         <h1>Login</h1>
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+        
+        <?php
+    if (isset($_POST['email'])){       
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $pass=md5($password);
+        
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
+            
+        
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["fname"] = $row['fname'];
+        $_SESSION["lname"] = $row['lname'];        
+        
+        if(isset($_SESSION["email"])){
+            //header("Location:dashboard.php");
+            echo "it is set"
+        }
+    }   else {
+        ?>
+        <span>Email or Password is incorrect, please try again
+         </span>
+ <?php
+        }
+    }
+   
+?>
+        
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
         <input type="submit" name="submit">
         <div class="switch">
             <span>Don't you have an account? <a href="signup.php">Create Account</a></span>
         </div>
     </form>
     
-<?php
-    if (isset($_POST['email'])){       
 
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
-    $row  = mysqli_fetch_array($select);
-            
-    $_SESSION["email"] = $_POST['email'];
-    $_SESSION["pass"] = $_POST['password'];
-    $pass=md5($_SESSION["pass"]);
-        
-    if(is_array($row)) {
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["pass"] = $row['pass'];
-    }   else {
-        echo '<script type = "text/javascript">';
-        echo 'alert("Invalid Email or Password!");';
-        echo 'window.location.href = "login.php" ';
-        echo '</script>';
-    }
-    }
-    if(isset($_SESSION["email"])){
-        header("Location:dashboard.php");
-    }
-?>
 </body>
 </html>
