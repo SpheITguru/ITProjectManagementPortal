@@ -52,9 +52,9 @@
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="cpassword" placeholder="Confirm Password">
         <div>
-            <input type="radio" id="student" name="role"><label for="student">Student</label>
-            <input type="radio" id="lecture" name="role"><label for="lecture">Lecture</label>
-            <input type="radio" id="sponsor" name="role"><label for="sponsor">Sponsor</label>
+            <input type="radio" value="student" name="role"><label for="student">Student</label>
+            <input type="radio" value="lecture" name="role"><label for="lecture">Lecture</label>
+            <input type="radio" value="sponsor" name="role"><label for="sponsor">Sponsor</label>
         </div>
         <input type="submit" name="submit">
         <div class="switch">
