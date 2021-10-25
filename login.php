@@ -28,8 +28,9 @@ require_once('connection.php');
     
 <?php
     if(isset($_POST['submit'])){
+    mysqli_select_db($db_name) or die("Unable to select database: " . mysqli_error());
     $query = "SELECT * FROM users";
-        $result = mysqli_query($query);
+    $result = mysqli_query($query);
     }
     if(!$result) die ("Database access failed: " . mysqli_error());
     $rows = mysqli_num_rows($result);
