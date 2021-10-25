@@ -11,7 +11,7 @@ if(isset($POST['submit'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
     
-    $sql="select * from users where email='".$email."'AND pass='".$password."' limit 1";
+    $sql="select * from users where email='$email' AND pass='$password' limit 1";
     
     $result=mysqli_query($sql);
     if(mysqli_num_rows($result)==1){
