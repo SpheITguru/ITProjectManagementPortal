@@ -27,7 +27,7 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['email'])){       
+    if (isset($_POST['submit'])){       
 
     $select = mysqli_query($con," SELECT count(*) as total FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or 
         die()mysqli_error($con);
@@ -38,18 +38,12 @@ require_once('connection.php');
     $pass=md5($_SESSION["pass"]);
         
     if($row['total'] > 0) {
-        header("Location:dashboard.php");
-        
-    }   else {
-        echo '<script type = "text/javascript">';
-        echo 'alert("Invalid Email or Password!");';
-        echo 'window.location.href = "login.php" ';
-        echo '</script>';
-    }
-    }
-    if(isset($_SESSION["email"])){
-        header("Location:dashboard.php");
-    }
+        echo "<script>alert('email and password are correct')</script>";        
+        } 
+        else{
+        echo "<script>alert('email and password are incorrect')</script>";  
+        }
+    } 
 ?>
 </body>
 </html>
