@@ -31,6 +31,7 @@ require_once('connection.php');
 
     $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
+    echo '$select';
         
     $_SESSION["email"] = $_POST['email'];
     $_SESSION["pass"] = $_POST['password'];
