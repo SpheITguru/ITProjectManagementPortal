@@ -27,12 +27,11 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['submit'])){       
+    if (isset($_POST['email'])){       
 
     $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
-    <p>echo '$select';</p>
-        
+            
     $_SESSION["email"] = $_POST['email'];
     $_SESSION["pass"] = $_POST['password'];
     $pass=md5($_SESSION["pass"]);
