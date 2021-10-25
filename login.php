@@ -1,13 +1,9 @@
 <?php
 
 session_start();
-$mysqli = new mysqli($_ENV["DB_HOST"],$_ENV["DB_USER"],$_ENV["DB_PASSWORD"],'projectdb);
+$conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"] , 'projectdb');
 
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
+?>
 
 ?>
 <!DOCTYPE html>
