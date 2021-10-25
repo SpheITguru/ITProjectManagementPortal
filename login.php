@@ -27,7 +27,7 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['emailt'])){       
+    if (isset($_POST['email'])){       
     $email = stripslashes($_REQUEST['email']);
     $email = mysqli_real_escape_string($con,$email);
         
