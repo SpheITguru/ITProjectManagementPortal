@@ -1,28 +1,8 @@
 <?php
-$host = $_ENV["DB_HOST"];
-$username = $_ENV["DB_USER"];
-$password = $_ENV["DB_PASSWORD"];
-$db_name = "projectdb";
+session_start();
+$conn = mysqli_connect('$_ENV["DB_HOST"]','$_ENV["DB_USER"]','$_ENV["DB_PASSWORD"]','projectdb') or die ('Unable to connect');
 
-mysqli_connect($host,$username,$password);
-mysqli_select_db($db_name);
-
-if(isset($POST['submit'])){
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    
-    $sql="select * from users where email='$email' AND pass='$password' limit 1";
-    
-    $result=mysqli_query($sql);
-    if(mysqli_num_rows($result)==1){
-        echo "You have Successfully logged in";
-        exit();
-    }
-    else{
-        echo " You have Entered Incorrect Password";
-    }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,5 +24,28 @@ if(isset($POST['submit'])){
             <span>Don't you have an account? <a href="signup.php">Create Account</a></span>
         </div>
     </form>
+    
+<?php
+    if (isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $pass = $_POST['password'];
+        
+    $select = mysqli_query($conn, "SELECT * FROM users WHERE email='$email' AND pass='$pass'");
+    $row = mysqli_fetch_array($select);
+        
+    if(is_array($row)){
+        $_SESSION["email"] = $row ["email"];
+        $_SESSION["password"] = $row ["pass"];
+    }   else {
+        echo '<script type = "text/javascript">';
+        echo 'alert("Invalif email or password!")';
+        echo 'windows.location.href = "index.php"';
+        echo '</script>';
+    }
+    }
+    if(isset($_SESSION["email"])){
+        header("Location:login.php");
+    }
+?>
 </body>
 </html>
