@@ -27,22 +27,28 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['email'])){       
+    if (isset($_POST['submit'])){       
 
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or die(mysqli_error($con));
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
         
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+    $_SESSION["email"] = $_POST['email'];
+    $_SESSION["pass"] = $_POST['password'];
     $pass=md5($_SESSION["pass"]);
         
-    if($row['email'] == 'sphe@g.com') {
-        echo "<script>alert('email and password are correct')</script>";        
-        } 
-        else{
-        echo "<script>alert('email and password are incorrect')</script>";  
-        }
-    } 
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
+    }   else {
+        echo '<script type = "text/javascript">';
+        echo 'alert("Invalid Email or Password!");';
+        echo 'window.location.href = "login.php" ';
+        echo '</script>';
+    }
+    }
+    if(isset($_SESSION["email"])){
+        header("Location:dashboard.php");
+    }
 ?>
 </body>
 </html>
