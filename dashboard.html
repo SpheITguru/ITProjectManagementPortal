@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +18,13 @@
 </div>
 
 <div class="navbar">
-  <a href="#" class="right">Logout</a>
+  <a href="logout.php" class="right">Logout</a>
 </div>
 
 <div class="row">
   <div class="side">
-    <h2>Welcome Siphephelo</h2>
-    <h5>21958988@dut4life.co.za</h5>
+    <h2>Welcome <?php echo $_SESSION['fname']; ?></h2>
+    <h5><?php echo $_SESSION['email']; ?></h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:250px;">
 		<table>
@@ -28,13 +32,13 @@
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td>Fname</td>
+				<td><?php echo $_SESSION['fname']; ?></td>
 			</tr>
 			<tr>
-				<td>Lname</td>
+				<td><?php echo $_SESSION['lname']; ?></td>
 			</tr>
 			<tr>
-				<td>email</td>
+				<td><?php echo $_SESSION['email']; ?></td>
 			</tr>
 		</table>
 	
