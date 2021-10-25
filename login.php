@@ -27,28 +27,27 @@ require_once('connection.php');
     </form>
     
 <?php
-    if (isset($_POST['email'])){       
-    $email = $_POST['email'];
-    $pass = $_POST['password'];
+    if (isset($_POST['submit'])){       
+
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
         
-    if ($email == "" || $pass == "")
-    {
-        $error = "Not all fields were entered<br />";
+    $_SESSION["email"] = $_POST['email'];
+    $_SESSION["pass"] = $_POST['password'];
+    $pass=md5($_SESSION["pass"]);
+        
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
+    }   else {
+        echo '<script type = "text/javascript">';
+        echo 'alert("Invalid Email or Password!");';
+        echo 'window.location.href = "login.php" ';
+        echo '</script>';
     }
-    else
-    {
-    $query = "SELECT email, pass FROM users WHERE email=$email AND pass=$pass";
-    if(mysqli_num_rows(queryMysql($query)) == 0)
-    {
-        $error = "<span class = 'error'> email/ password invalid</span><br /><br />";
-            }
     }
-    else{
-    $_SESSION['email'] = $email;
-    $_SESSION['pass'] = $pass;
-    die(header("Location:dashboard.php"));
-    }
-     
+    if(isset($_SESSION["email"])){
+        header("Location:dashboard.php");
     }
 ?>
 </body>
