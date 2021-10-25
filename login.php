@@ -3,6 +3,7 @@
 session_start();
 include "db_conn.php";
 require_once('connection.php');
+mysqli_select_db($projectdb);
 
 ?>
 
@@ -42,7 +43,7 @@ require_once('connection.php');
         exit();
     }
     else{
-        echo " You have entered incorrect ingormation"
+        echo " You have entered incorrect information"
     }
     
 ?>
