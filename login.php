@@ -1,7 +1,7 @@
 <?php
-$host = $_ENV["DB_HOST"];
-$username = $_ENV["DB_USER"];
-$password = $_ENV["DB_PASSWORD"];
+$host = "$_ENV["DB_HOST"]";
+$username = "$_ENV["DB_USER"]";
+$password = "$_ENV["DB_PASSWORD"]";
 $db_name = "projectdb";
 
 mysqli_connect($host,$user,$password);
