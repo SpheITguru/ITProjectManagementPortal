@@ -39,7 +39,7 @@ if(isset(['email'])){
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="Submit">
+        <input type="submit" name="submit">
         <div class="switch">
             <span>Don't you have an account? <a href="signup.php">Create Account</a></span>
         </div>
