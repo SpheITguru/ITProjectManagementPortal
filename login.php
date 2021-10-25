@@ -15,7 +15,7 @@ session_start();
 </head>
 <body>
     
-    <form method="POST" action="dashboard.php">
+    <form method="POST" action="#">
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
