@@ -4,8 +4,8 @@ $username = $_ENV["DB_USER"];
 $password = $_ENV["DB_PASSWORD"];
 $db_name = "projectdb";
 
-mysqli_connect($host,$user,$password);
-mysqli_select_db(db_name);
+mysqli_connect($host,$username,$password);
+mysqli_select_db($db_name);
 
 if(isset($_POST['email'])){
     $email=$_POST['email'];
