@@ -30,7 +30,15 @@ require_once('connection.php');
     $row  = mysqli_fetch_array($select);
             
     if(is_array($row)) {
-        echo $row['lname'];
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["fname"] = $row['fname'];
+        $_SESSION["lname"] = $row['lname'];
+        
+        if(isset($_SESSION["email"])){
+            //header("Location:dashboard.php");
+            echo "it is set";
+            echo $_SESSION["email"];
+            }
         }
     }
    
