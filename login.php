@@ -1,4 +1,4 @@
-<?php
+i<?php
 
 session_start();
 include "db_conn.php";
@@ -32,8 +32,8 @@ require_once('connection.php');
     $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
     $row  = mysqli_fetch_array($select);
         
-    $_SESSION["email"] = $_POST['email'];
-    $_SESSION["pass"] = $_POST['password'];
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
     $pass=md5($_SESSION["pass"]);
         
     if(is_array($row)) {
