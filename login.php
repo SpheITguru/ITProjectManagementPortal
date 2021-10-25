@@ -3,8 +3,6 @@
 session_start();
 include "db_conn.php";
 require_once('connection.php');
-mysqli_select_db($projectdb);
-
 ?>
 
 <!DOCTYPE html>
@@ -29,23 +27,28 @@ mysqli_select_db($projectdb);
     </form>
     
 <?php
-    if (isset($_POST['email'])){   
+    if (isset($_POST['submit'])){       
+
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
         
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $_SESSION["email"] = $_POST['email'];
+    $_SESSION["pass"] = $_POST['password'];
+    $pass=md5($_SESSION["pass"]);
         
-    $sql = "SELECT * FROM users WHERE email = '".$email."' AND pass = '".$pass."' limit 1";
-        
-    $result = mysqli_query($sql);
-    
-    if(mysqli_num_rows($result)==1){
-        echo " You have Successfully logged in";
-        exit();
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
+    }   else {
+        echo '<script type = "text/javascript">';
+        echo 'alert("Invalid Email or Password!");';
+        echo 'window.location.href = "login.php" ';
+        echo '</script>';
     }
-    else{
-        echo " You have entered incorrect information"
     }
-    
+    if(isset($_SESSION["email"])){
+        header("Location:dashboard.php");
+    }
 ?>
 </body>
 </html>
