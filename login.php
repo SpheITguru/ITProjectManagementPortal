@@ -29,16 +29,17 @@ require_once('connection.php');
 <?php
     if (isset($_POST['email'])){       
 
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $select = mysqli_query($con," SELECT count(*) as total FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or 
+        die()mysqli_error($con);
     $row  = mysqli_fetch_array($select);
         
     $email = $_POST['email'];
     $pass = $_POST['password'];
     $pass=md5($_SESSION["pass"]);
         
-    if(is_array($row)) {
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["pass"] = $row['pass'];
+    if($row['total'] > 0) {
+        header("Location:dashboard.php");
+        
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
