@@ -36,8 +36,8 @@ require_once('connection.php');
     $row  = mysqli_fetch_array($select);
 
     if(is_array($row)) {
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["pass"] = $row['pass'];
+        $email = $row['email'];
+        $pass["pass"] = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
