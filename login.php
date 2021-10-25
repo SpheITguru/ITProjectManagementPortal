@@ -26,23 +26,7 @@ require_once('connection.php');
     $password = $_POST['password'];
     $pass=md5($password);
         
-    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
-    $row  = mysqli_fetch_array($select);
-            
         
-    if(is_array($row)) {
-        $_SESSION["email"] = $row['email'];
-        $_SESSION["fname"] = $row['fname'];
-        $_SESSION["lname"] = $row['lname'];        
-        
-        if(isset($_SESSION["email"])){
-            //header("Location:dashboard.php");
-            echo "it is set"
-        }
-    }   else {
-        echo "Email or Password is incorrect, please try again"
-
-        }
     }
    
 ?>
