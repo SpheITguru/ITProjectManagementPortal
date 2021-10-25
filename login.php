@@ -26,7 +26,8 @@ require_once('connection.php');
     $password = $_POST['password'];
     $pass=md5($password);
         
-        
+    echo $email;
+    echo $pass;
     }
    
 ?>
