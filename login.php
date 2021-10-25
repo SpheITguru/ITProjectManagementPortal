@@ -7,7 +7,7 @@ $db_name = "projectdb";
 mysqli_connect($host,$user,$password);
 mysqli_select_db(db_name);
 
-if(isset(['email'])){
+if(isset($_POST['email'])){
     $email=$_POST['email'];
     $password=$_POST['password'];
     
