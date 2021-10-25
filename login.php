@@ -29,14 +29,14 @@ require_once('connection.php');
 <?php
     if (isset($_POST['email'])){       
 
-    $select = mysqli_query($con," SELECT count(*) as total FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or die(mysqli_error($con));
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or die(mysqli_error($con));
     $row  = mysqli_fetch_array($select);
         
     $email = $_POST['email'];
     $pass = $_POST['password'];
     $pass=md5($_SESSION["pass"]);
         
-    if($row['total'] > 0) {
+    if($row['email'] == $email && $row['pass'] == $pass) {
         echo "<script>alert('email and password are correct')</script>";        
         } 
         else{
