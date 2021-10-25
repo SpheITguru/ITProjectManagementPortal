@@ -28,25 +28,26 @@ require_once('connection.php');
     
 <?php
     if (isset($_POST['email'])){       
-    $email = stripslashes($_REQUEST['email']);
-    $email = mysqli_real_escape_string($con,$email);
+
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
         
-    $password = stripslashes($_REQUEST['password']);
-    $password = mysqli_real_escape_string($con,$password);
-    $query = "SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ";
-    $result = mysqli_query($con,$query) or die(mysqli_error());
-    $row  = mysqli_num_rows($result);
+    $_SESSION["email"] = $_POST['email'];
+    $_SESSION["pass"] = $_POST['password'];
+    $pass=md5($_SESSION["pass"]);
         
-    if($rows==1){
-        $_SESSION['email'] = $email;
-        header("Location:dashboard.php");
-        exit();
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["pass"] = $row['pass'];
+    }   else {
+        echo '<script type = "text/javascript">';
+        echo 'alert("Invalid Email or Password!");';
+        echo 'window.location.href = "login.php" ';
+        echo '</script>';
     }
-    else{
-        $message="Error email or password";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-        }
-    
+    }
+    if(isset($_SESSION["email"])){
+        header("Location:dashboard.php");
     }
 ?>
 </body>
