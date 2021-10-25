@@ -20,7 +20,7 @@ require_once('connection.php');
         <h1>Login</h1>
         
         <?php
-    if (isset($_POST['email'])){       
+    if (isset($_POST['submit'])){       
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -40,10 +40,8 @@ require_once('connection.php');
             echo "it is set"
         }
     }   else {
-        ?>
-        <span>Email or Password is incorrect, please try again
-         </span>
- <?php
+        echo "Email or Password is incorrect, please try again"
+
         }
     }
    
