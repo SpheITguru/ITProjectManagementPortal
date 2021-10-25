@@ -38,12 +38,12 @@ $conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"] 
         $_SESSION["password"] = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
-        echo 'alert("Invalid Username or Password!");';
+        echo 'alert("Invalid Email or Password!");';
         echo 'window.location.href = "login.php" ';
         echo '</script>';
     }
     }
-    if(isset($_SESSION["Username"])){
+    if(isset($_SESSION["email"])){
         header("Location:dashboard.php");
     }
 ?>
