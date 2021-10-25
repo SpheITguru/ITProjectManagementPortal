@@ -15,7 +15,7 @@ $conn = mysqli_connect('$_ENV["DB_HOST"]', '$_ENV["DB_USER"]', '$_ENV["DB_PASSWO
 </head>
 <body>
     
-    <form method="POST" action="login.php">
+    <form method="POST" action="dashboard.php">
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
