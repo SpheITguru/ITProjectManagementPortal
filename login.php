@@ -27,18 +27,28 @@ require_once('connection.php');
     </form>
     
 <?php
-    if(isset($_POST['submit'])){
-    mysqli_select_db($db_name) or die("Unable to select database: " . mysqli_error());
-    $query = "SELECT * FROM users";
-    $result = mysqli_query($query);
-    }
-    if(!$result) die ("Database access failed: " . mysqli_error());
-    $rows = mysqli_num_rows($result);
-    for ($j = 0; $j < $rows; ++$j)
+    if (isset($_POST['email'])){       
+    $email = $_POST['email'];
+    $pass = $_POST['password'];
+        
+    if ($email == "" || $pass == "")
     {
-        echo 'Name: ' . mysqli_result($result,$j,'fname')  . '<br />';
-        echo 'Surname: ' . mysqli_result($result,$j,'lname')  . '<br />';
-        echo 'email: ' . mysqli_result($result,$j,'email')  . '<br />';
+        $error = "Not all fields were entered<br />";
+    }
+    else
+    {
+    $query = "SELECT email, pass FROM users WHERE email=$email AND pass=$pass";
+    if(mysqli_num_rows(queryMysql($query)) == 0)
+    {
+        $error = "<span class = 'error'> email/ password invalid</span><br /><br />";
+            }
+    }
+    else{
+    $_SESSION['email'] = $email;
+    $_SESSION['pass'] = $pass;
+    die(header("Location:dashboard.php"));
+    }
+     
     }
 ?>
 </body>
