@@ -36,8 +36,7 @@ require_once('connection.php');
                 $_SESSION["lname"] = $row['lname'];        
 
                 if(isset($_SESSION["email"])){
-                    //header("Location:dashboard.php");
-                    echo "it is set";
+                    header("Location:dashboard.php");
                 }
             }   else {
                 echo "Email or Password is incorrect, please try again";
