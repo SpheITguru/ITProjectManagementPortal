@@ -17,7 +17,7 @@ require_once('connection.php');
 </head>
 <body>
     
-    <form method="POST" action="#">
+    <form method="POST" action="login.php">
         <h1>Login</h1>
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
