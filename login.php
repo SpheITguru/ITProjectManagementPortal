@@ -26,8 +26,9 @@ require_once('connection.php');
     $password = $_POST['password'];
     $pass=md5($password);
         
-    echo $email;
-    echo $pass;
+    $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
+        
     }
    
 ?>
