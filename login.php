@@ -41,8 +41,8 @@ $conn =  mysqli_connect($host, $username, $password,$db_name);
     $row = mysqli_fetch_array($select);
         
     if(is_array($row)){
-        $_SESSION["email"] = $row ["email"];
-        $_SESSION["password"] = $row ["pass"];
+        $_SESSION["email"] == $row ["email"];
+        $_SESSION["password"] == $row ["pass"];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalif email or password!")';
