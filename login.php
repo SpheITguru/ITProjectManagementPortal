@@ -29,22 +29,22 @@ $conn = mysqli_connect('$_ENV["DB_HOST"]', '$_ENV["DB_USER"]', '$_ENV["DB_PASSWO
     if (isset($_POST['submit'])){
         $email = $_POST['email'];
         $pass = $_POST['password'];
-        
-    $select = mysqli_query($conn, "SELECT * FROM users WHERE email='$email' AND pass='$pass'");
-    $row = mysqli_fetch_array($select);
-        
-    if(is_array($row)){
-        $_SESSION["email"] == $row ["email"];
-        $_SESSION["password"] == $row ["pass"];
+
+    $select = mysqli_query($conn," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
+    $row  = mysqli_fetch_array($select);
+
+    if(is_array($row)) {
+        $_SESSION["email"] = $row['email'];
+        $_SESSION["password"] = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
-        echo 'alert("Invalif email or password!")';
-        echo 'windows.location.href = "index.php"';
+        echo 'alert("Invalid Username or Password!");';
+        echo 'window.location.href = "login.php" ';
         echo '</script>';
     }
     }
-    if(isset($_SESSION['email'])){
-        header("Location:login.php");
+    if(isset($_SESSION["Username"])){
+        header("Location:dashboard.php");
     }
 ?>
 </body>
