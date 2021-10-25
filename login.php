@@ -7,12 +7,7 @@ $password = $_ENV["DB_PASSWORD"];
 
 $db_name = "projectdb";
 
-$conn = new mysqli($host, $username, $password);
-
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-  }
-  echo "Connected successfully";
+$conn =  mysqli_connect($host, $username, $password,$db_name);
 
 ?>
 
