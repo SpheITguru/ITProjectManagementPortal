@@ -29,8 +29,7 @@ require_once('connection.php');
 <?php
     if (isset($_POST['submit'])){       
 
-    $select = mysqli_query($con," SELECT count(*) as total FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or 
-        die()mysqli_error($con);
+    $select = mysqli_query($con," SELECT count(*) as total FROM users WHERE email = '".$email."' AND pass = '".$pass."' ") or die(mysqli_error($con));
     $row  = mysqli_fetch_array($select);
         
     $email = $_POST['email'];
