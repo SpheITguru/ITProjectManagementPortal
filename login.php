@@ -37,7 +37,7 @@ require_once('connection.php');
 
     if(is_array($row)) {
         $email = $row['email'];
-        $pass["pass"] = $row['pass'];
+        $pass = $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
