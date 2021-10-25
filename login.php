@@ -1,16 +1,9 @@
 <?php
+
 session_start();
-
-$host = $_ENV["DB_HOST"];
-$username = $_ENV["DB_USER"];
-$password = $_ENV["DB_PASSWORD"];
-
-$db_name = 'projectdb';
-
-$conn =  mysqli_connect('$host', '$username', '$password','$db_name') or die ('Unable to connect');
+$conn = mysqli_connect($_ENV["DB_HOST"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"] , 'projectdb') or die ('Unable to connect');
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
