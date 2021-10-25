@@ -46,11 +46,11 @@
     
     <form action = "signup.php" method = "POST">
         <h1>Sign Up</h1>
-        <input type="text" name="firstname" placeholder="Firstname">
-        <input type="text" name="lastname" placeholder="Lastname">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="cpassword" placeholder="Confirm Password">
+        <input type="text" name="firstname" placeholder="Firstname" required>
+        <input type="text" name="lastname" placeholder="Lastname" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="cpassword" placeholder="Confirm Password" required>
         <div>
             <input type="radio" value="student" name="role"><label for="student">Student</label>
             <input type="radio" value="lecture" name="role"><label for="lecture">Lecture</label>
