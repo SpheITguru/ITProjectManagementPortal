@@ -36,7 +36,7 @@ require_once('connection.php');
 
     if(is_array($row)) {
         $_SESSION["email"] == $row['email'];
-        $_SESSION["password"] == $row['pass'];
+        $_SESSION["pass"] == $row['pass'];
     }   else {
         echo '<script type = "text/javascript">';
         echo 'alert("Invalid Email or Password!");';
