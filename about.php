@@ -43,12 +43,7 @@
                 industry of IT for 3 years, give you a solution called IT Project Management Portal, to
                 save time for you and your students.
                 </p>
-                 <p>
-                 <?php
-                    print "env via \$_ENV is: ".$_ENV["DB_HOST"]."\n";
-                    print "env via getenv is: ".getenv("DB_HOST")."\n";
-                    ?>
-                </p>
+                                 
             </div>
             <div class="image-section">
                 <img src="images/about.png">
