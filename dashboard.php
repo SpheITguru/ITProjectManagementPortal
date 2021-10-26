@@ -61,6 +61,7 @@ session_start();
 
 				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
 				$result = mysqli_query($con, $sql);
+				echo 'checking lines';
 
 				if($result)
 				{
