@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('connection.php');
 ?>
 
 
@@ -50,9 +51,8 @@ session_start();
 							
 							
 		<?php
-		require_once('connection.php');
-
-
+			require_once('connection.php');						     
+		
 			if(isset($_POST['submit']))
 			{
 				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
