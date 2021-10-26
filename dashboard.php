@@ -61,8 +61,7 @@ require_once('connection.php');
 								
 				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
 				$result = mysqli_query($con, $sql);
-				echo $result;
-
+				
 				if($result)
 				{
 					echo 'Your Record has been saved in the Database';
