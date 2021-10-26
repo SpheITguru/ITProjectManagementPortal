@@ -48,28 +48,7 @@ require_once('connection.php');
     <h3>Project Team</h3>
 	<form class="form-inline" method="POST" action="login.php>
 		
-		<?php
-
-		    if(isset($_POST['submit']))
-		    {
-			$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
-			$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
-			$tname = mysqli_real_escape_string($con, $_POST['team_name']);
-
-				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
-			$result = mysqli_query($con, $sql);
-
-				if($result)
-			{
-			    echo 'Your Record has been saved in the Database';
-			}
-			else 
-				{
-			    echo 'Check your inputs';
-			}
-		    }
-
-		?>
+		
 									
 		<input type="name" name="your_id" placeholder="Your student number" required><br>
 		<input type="name" name="partnet_id" placeholder="Partner student number" required><br>
