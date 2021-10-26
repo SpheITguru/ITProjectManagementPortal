@@ -98,7 +98,7 @@ require_once('connection.php');
     <h2>SUBMISSION</h2>
 
 		<form class="form-inline" action="/action_page.php">
-			<label for="email">Tusk Name:</label>
+			<label for="email">Task Name:</label>
 			<input type="name" id="email" placeholder="Tusk Name" name="tusk_name">
 			<input type="file" id="myFile" name="filename">
 			<button type="submit">Submit</button>
@@ -109,7 +109,7 @@ require_once('connection.php');
     <div class="fakeimg" style="height:270px;">
 		<table>
 			<tr>
-				<th>Tusk Name</th>
+				<th>Task Name</th>
 				<th>Sponsor signiture</th>
 				<th>Lecture feedback</th>
 				<th>Document</th>
