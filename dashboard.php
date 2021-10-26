@@ -72,7 +72,7 @@ require_once('connection.php');
 		?>
 									
 		
-		<input type="name" name="your_id" placeholder="Partner student number" required><br>
+		<input type="name" name="your_sid" placeholder="Partner student number" required><br>
 		<input type="name" name="partnet_id" placeholder="Partner student number" required><br>
 		<input type="name" name="team_name" placeholder="Team Name" required><br>
 		<br>
