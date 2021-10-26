@@ -1,27 +1,5 @@
 <?php
 session_start();
-require_once('connection.php');
-
-
-	if(isset($_POST['submit']))
-	{
-		$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
-		$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
-		$tname = mysqli_real_escape_string($con, $_POST['team_name']);
-
-		$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
-		$result = mysqli_query($con, $sql);
-
-		if($result)
-		{
-			echo 'Your Record has been saved in the Database';
-		}
-		else 
-		{
-			echo 'Check your inputs';
-		}
-	 }
-
 ?>
 
 
@@ -68,7 +46,35 @@ require_once('connection.php');
 	</div>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
-	<form class="form-inline" method="POST" action="dashboard.php>									
+	<form class="form-inline" method="POST" action="dashboard.php>	
+							
+							
+		<?php
+		require_once('connection.php');
+
+
+			if(isset($_POST['submit']))
+			{
+				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
+				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
+				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
+
+				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
+				$result = mysqli_query($con, $sql);
+
+				if($result)
+				{
+					echo 'Your Record has been saved in the Database';
+				}
+				else 
+				{
+					echo 'Check your inputs';
+				}
+			 }
+
+		?>
+							
+							
 		<input type="text" name="team_name" placeholder="Team Name" required>
 		<input type="text" name="your_id" placeholder="Your student number" required><br>
 		<input type="text" name="partnet_id" placeholder="Partner student number" required><br>
