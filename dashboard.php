@@ -76,7 +76,7 @@ session_start();
 		?>
 							
 							
-		<input type="text" name="team_name" placeholder="Team Name" required>
+		<input type="text" name="team_name*" placeholder="Team Name">
 		<input type="text" name="your_id" placeholder="Your student number" required><br>
 		<input type="text" name="partnet_id" placeholder="Partner student number" required><br>
 		<input type="text" name="team_name" placeholder="Team Name" required><br>
