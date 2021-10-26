@@ -97,7 +97,7 @@ require_once('connection.php');
 
     <h2>SUBMISSION</h2>
 
-		<form class="form-inline" action="/action_page.php">
+		<form class="form-inline" action="#">
 			<label for="email">Task Name:</label>
 			<input type="name" id="email" placeholder="Tusk Name" name="tusk_name">
 			<input type="file" id="myFile" name="filename">
