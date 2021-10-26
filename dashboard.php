@@ -46,7 +46,7 @@ session_start();
 	</div>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
-	<form class="form-inline" method="POST" action="dashboard.php>	
+	<form class="form-inline" action="dashboard.php method="POST">	
 							
 							
 		<?php
@@ -58,8 +58,7 @@ session_start();
 				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
 				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
 				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
-				echo $tname;
-
+				
 				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
 				$result = mysqli_query($con, $sql);
 				
