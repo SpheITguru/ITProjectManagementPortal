@@ -46,7 +46,7 @@ require_once('connection.php');
 	</div>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
-	<form class="form-inline" method="POST" action="login.php>
+	<form class="form-inline" method="POST" action="dashboard.php>
 		
 		
 									
