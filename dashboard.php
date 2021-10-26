@@ -69,10 +69,10 @@ require_once('connection.php');
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
 	<form class="form-inline" method="POST" action="dashboard.php>									
-		<input type="name" name="team_name" placeholder="Team Name" required>
-		<input type="name" name="your_id" placeholder="Your student number" required><br>
-		<input type="name" name="partnet_id" placeholder="Partner student number" required><br>
-		<input type="name" name="team_name" placeholder="Team Name" required><br>
+		<input type="text" name="team_name" placeholder="Team Name" required>
+		<input type="text" name="your_id" placeholder="Your student number" required><br>
+		<input type="text" name="partnet_id" placeholder="Partner student number" required><br>
+		<input type="text" name="team_name" placeholder="Team Name" required><br>
 		<br>
 		<input type="submit" name="submit">
 	</form>
