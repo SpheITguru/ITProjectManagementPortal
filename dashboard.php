@@ -34,13 +34,13 @@ require_once('connection.php');
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td><?php echo $_SESSION['fname']; ?></td>
+				<td>Name: <?php echo $_SESSION['fname']; ?></td>
 			</tr>
 			<tr>
-				<td><?php echo $_SESSION['lname']; ?></td>
+				<td>Surname: <?php echo $_SESSION['lname']; ?></td>
 			</tr>
 			<tr>
-				<td><?php echo $_SESSION['email']; ?></td>
+				<td>Student iD: <?php echo $_SESSION['email']; ?></td>
 			</tr>
 		</table>
 	
