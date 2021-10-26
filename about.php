@@ -19,7 +19,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             
-            <li><a href="login.php">Dashboard</a></li>
+            <li><a href="#">Dashboard</a></li>
             <li><a href="contact.php">Contact Us</a></li>
         </ul>
         <ul class="login">
