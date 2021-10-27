@@ -1,6 +1,11 @@
 <?php
 session_start();
 require_once('connection.php');
+if(isset($_SESSION["email"])){
+	header("Location:dashboard.php");
+}else{
+	header("Location:login.php");
+}
 ?>
 
 
