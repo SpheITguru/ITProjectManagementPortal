@@ -34,8 +34,8 @@ require_once('connection.php');
                 $_SESSION["email"] = $row['email'];
                 $_SESSION["fname"] = $row['fname'];
                 $_SESSION["lname"] = $row['lname'];        
-
-                if(isset($_SESSION["email"])){
+                $_SESSION["role"] = $row['role'];
+                if(isset($_SESSION["email"]) && isset($_SESSION["role"]=="student")){
                     header("Location:dashboard.php");
                 }
             }   else {
