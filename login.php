@@ -36,7 +36,7 @@ require_once('connection.php');
                 $_SESSION["lname"] = $row['lname'];        
                 $_SESSION["role"] = $row['role'];
                 if(isset($_SESSION["email"]) && $row['role']=="student"){
-                    header("Location:dashboard.php");
+                    header("Location:student.php");
                 }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
                     header("Location:sponsor.html");
                 }
