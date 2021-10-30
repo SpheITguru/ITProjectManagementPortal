@@ -39,6 +39,8 @@ require_once('connection.php');
                     header("Location:student.php");
                 }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
                     header("Location:sponsor.html");
+                }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
+                    header("Location:lecture.html");
                 }
             }   else {
                 echo "Email or Password is incorrect, please try again";
