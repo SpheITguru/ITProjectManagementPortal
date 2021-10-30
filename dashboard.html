@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once('connection.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +20,13 @@
 </div>
 
 <div class="navbar">
-  <a href="#" class="right">Logout</a>
+  <a href="logout.php" class="right">Logout</a>
 </div>
 
 <div class="row">
   <div class="side">
-    <h2>Welcome Siphephelo</h2>
-    <h5>21958988@dut4life.co.za</h5>
+    <h2>Welcome <?php echo $_SESSION['fname']; ?></h2>
+    <h5><?php echo $_SESSION['email']; ?></h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:250px;">
 		<table>
@@ -28,13 +34,13 @@
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td>Name: </td>
+				<td>Name: <?php echo $_SESSION['fname']; ?></td>
 			</tr>
 			<tr>
-				<td>Surname: </td>
+				<td>Surname: <?php echo $_SESSION['lname']; ?></td>
 			</tr>
 			<tr>
-				<td>Student ID: </td>
+				<td>Student ID: <?php echo $_SESSION['student']; ?></td>
 			</tr>
 		</table>
 	
@@ -46,7 +52,32 @@
 	</form>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
-	<form class="form-inline">
+	<form class="form-inline" action="dashboard.php" method="POST">
+		
+		<?php
+			require_once('connection.php');						     
+		
+			if(isset($_POST['submit']))
+			{
+				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
+				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
+				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
+								
+				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
+				$result = mysqli_query($con, $sql);
+				
+				if($result)
+				{
+					echo 'Your Record has been saved in the Database';
+				}
+				else 
+				{
+					echo 'Check your inputs';
+				}
+			 }
+
+		?>
+		
 		<input type="name" name="your_id" placeholder="Your student number"><br>
 		<input type="name" name="partnet_id" placeholder="Partner student number"><br>
 		<input type="name" name="team_name" placeholder="Team Name"><br>
