@@ -92,12 +92,8 @@ require_once('connection.php');
 				<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
 			
 			</div>
-			<div class="column">
-				
-					<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>
-					<br>
-					<input type="submit" name="submit">
-				
+			<div class="column">				
+				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>				
 			</div>
 		</form>
 	</div>
