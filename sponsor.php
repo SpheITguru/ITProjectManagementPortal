@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+//include "db_conn.php";
+require_once('connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +21,12 @@
 </div>
 
 <div class="navbar">
-  <a href="#" class="right">Logout</a>
+  <a href="logout.php" class="right">Logout</a>
 </div>
 
 <div class="row">
   <div class="side">
-    <h2>Welcome Siphephelo</h2>
+    <h2>Welcome <?php echo $_SESSION['fname']; ?></h2>
     <h5>21958988@dut4life.co.za</h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:250px;">
@@ -28,10 +35,10 @@
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td>Name: </td>
+				<td>Name: <?php echo $_SESSION['fname']; ?></td>
 			</tr>
 			<tr>
-				<td>Surname: </td>
+				<td>Surname: <?php echo $_SESSION['lname']; ?></td>
 			</tr>
 		</table>
 	
