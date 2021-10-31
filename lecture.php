@@ -33,7 +33,7 @@ require_once('connection.php');
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td>Name: <?php echo $_SESSION['fname']; ?</td>
+				<td>Name: <?php echo $_SESSION['fname']; ?></td>
 			</tr>
 			<tr>
 				<td>Surname: <?php echo $_SESSION['lname']; ?></td>
