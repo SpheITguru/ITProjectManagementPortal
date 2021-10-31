@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once('connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +19,7 @@
 </div>
 
 <div class="navbar">
-  <a href="#" class="right">Logout</a>
+  <a href="logout.php" class="right">Logout</a>
 </div>
 
 <div class="row">
@@ -28,10 +33,10 @@
 				<th>Profile</th>
 			</tr>
 			<tr>
-				<td>Name: </td>
+				<td>Name: <?php echo $_SESSION['fname']; ?</td>
 			</tr>
 			<tr>
-				<td>Surname: </td>
+				<td>Surname: <?php echo $_SESSION['lname']; ?></td>
 			</tr>
 		</table>
 	
