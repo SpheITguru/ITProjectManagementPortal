@@ -25,7 +25,7 @@ require_once('connection.php');
 <div class="row">
   <div class="side">
     <h2>Welcome <?php echo $_SESSION['fname']; ?></h2>
-    <h5>email</h5>
+    <h5><?php echo $_SESSION['email']; ?></h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:250px;">
 		<table>
