@@ -94,7 +94,7 @@ require_once('connection.php');
   </div>
   <div class="main">
     <h2>Search an Idea</h2>
-    <h5>Oct , 2020</h5>
+    <h5>Nov , 2021</h5>
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
 	<div class="row">
@@ -122,18 +122,18 @@ require_once('connection.php');
     <h2>SUBMISSION</h2>
 
 		<form class="form-inline" action="/action_page.php">
-			<label for="email">Tusk Name:</label>
-			<input type="name" id="email" placeholder="Tusk Name" name="tusk_name">
+			<label for="email">Task Name:</label>
+			<input type="name" id="email" placeholder="Task Name" name="task_name">
 			<input type="file" id="myFile" name="filename">
 			<button type="submit">Submit</button>
 		</form>
 
-    <h5>Oct , 2020</h5>
+    <h5>Nov , 2021</h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:270px;">
 		<table>
 			<tr>
-				<th>Tusk Name</th>
+				<th>Task Name</th>
 				<th>Sponsor signiture</th>
 				<th>Lecture feedback</th>
 				<th>Document</th>
