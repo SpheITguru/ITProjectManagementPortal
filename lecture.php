@@ -93,7 +93,7 @@ require_once('connection.php');
 			
 			</div>
 			<div class="column">				
-				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>	
+				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $_SESSION['email']; ?></textarea>	
 				<br>
 				<input type="submit" name="submit">
 			</div>
