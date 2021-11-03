@@ -52,7 +52,7 @@ require_once('connection.php');
 	</form>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
-	<form class="form-inline" action="dashboard.php" method="POST">
+	<form class="form-inline" method="POST">
 		
 		<?php
 			require_once('connection.php');						     
