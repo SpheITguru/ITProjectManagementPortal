@@ -63,7 +63,7 @@ require_once('connection.php');
 				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
 				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
 								
-				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$pstudent')";
+				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$ystudent')";
 				$result = mysqli_query($con, $sql);
 				
 				if($result)
