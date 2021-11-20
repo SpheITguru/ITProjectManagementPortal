@@ -17,9 +17,9 @@
     // More headers
     $headers = "From: IT Portal";
 
-    $mail = mail($to,$subject,$message,$headers);
+    $mailto = mail($to,$subject,$message,$headers);
 
-    if ($mail) {
+    if ($mailto) {
       echo "<script>alert('Mail Send.');</script>";
     }else {
       echo "<script>alert('Mail Not Send.');</script>";
