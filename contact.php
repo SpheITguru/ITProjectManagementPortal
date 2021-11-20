@@ -169,9 +169,6 @@ if(!empty($_POST["Send"])) {
 	    $message = "Your contact information is received successfully.";
 	    $type = "success";
 	}
-  else{
-    echo "Message is not sent!";
-  }
 }
-require_once "contact-view.php";
+require_once "contact.php";
 ?>
