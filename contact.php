@@ -6,7 +6,7 @@
     $message = $_POST["message"];
 
     $to = $email;
-    $subject = $message;
+    //$subject = $message;
 
     $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
 
@@ -22,7 +22,7 @@
     if ($mail) {
       echo "<script>alert('Mail Send.');</script>";
     }else {
-      echo "<script>alert('Mail Not Send.');</script>";
+      echo "Mail Not Send.";
     }
   }
 ?>
