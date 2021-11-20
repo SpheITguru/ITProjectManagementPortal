@@ -6,9 +6,9 @@
     $message = $_POST["message"];
 
     $to = "sphe.mlu@gmail.com";
-    //$subject = $message;
+    $subject = $message;
 
-    $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
+    $message = "Email: {$email} Subject: {$subject}  Message: " . $message;
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
