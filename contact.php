@@ -76,15 +76,15 @@
 
           <div class="info">
             <div class="information">
-              <img src="images/location.png" class="icon" alt="" />
+              <img src="images/img/location.png" class="icon" alt="" />
               <p>185 Steve Biko Road, Durban 4000</p>
             </div>
             <div class="information">
-              <img src="images/email.png" class="icon" alt="" />
+              <img src="images/img/email.png" class="icon" alt="" />
               <p>info@itproject.com</p>
             </div>
             <div class="information">
-              <img src="images/phone.png" class="icon" alt="" />
+              <img src="images/img/phone.png" class="icon" alt="" />
               <p>123-456-789</p>
             </div>
           </div>
