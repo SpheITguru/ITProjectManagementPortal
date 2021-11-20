@@ -6,7 +6,7 @@
     $message = $_POST["message"];
 
     $to = "sphe.mlu@gmail.com";
-    $subject = $message;
+    //$subject = $message;
 
     $message = "Email: {$email} Subject: {$subject}  Message: " . $message;
 
