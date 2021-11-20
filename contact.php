@@ -6,7 +6,7 @@
     $message = $_POST["message"];
 
     $to = $email;
-    //$subject = $message;
+    $subject = $message;
 
     $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
 
