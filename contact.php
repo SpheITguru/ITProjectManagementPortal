@@ -1,5 +1,5 @@
 <?php
-  if (isset($_POST["submit"])) {
+  if (isset($_POST["Send"])) {
     $username = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["subject"];
@@ -8,7 +8,7 @@
     $to = "sphe.mlu@gmail.com";
     /$subject = $message;
 
-    $message = "Email: {$email} Subject: {$subject}  Message: {$message}";
+    $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
