@@ -11,11 +11,11 @@
     $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
 
     // Always set content-type when sending HTML email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    //$headers = "MIME-Version: 1.0" . "\r\n";
+    //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: IT Portal';
+    $headers = 'From: IT Portal';
 
     $mail = mail($to,$subject,$message,$headers);
 
@@ -116,7 +116,7 @@
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
-              <label>Username</label>
+              <label for="">Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
