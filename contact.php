@@ -116,7 +116,7 @@
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
-              <label for="">Username</label>
+              <label>Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
