@@ -15,7 +15,7 @@
     //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers = 'From: IT Portal';
+    $headers = "From: IT Portal";
 
     $mail = mail($to,$subject,$message,$headers);
 
