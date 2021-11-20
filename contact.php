@@ -1,3 +1,32 @@
+<?php
+  if (isset($_POST["submit"])) {
+    $username = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+
+    $to = $email;
+    //$subject = $message;
+
+    $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
+
+    // Always set content-type when sending HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // More headers
+    $headers .= 'From: sphe.mlu@gmail.com';
+
+    $mail = mail($to,$subject,$message,$headers);
+
+    if ($mail) {
+      echo "<script>alert('Mail Send.');</script>";
+    }else {
+      echo "<script>alert('Mail Not Send.');</script>";
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,29 +108,11 @@
           </div>
         </div>
 
-        <?php
-            if(!empty($_POST["Send"])) {
-              $name = $_POST["name"];
-              $email = $_POST["email"];
-              $subject = $_POST["subject"];
-              $content = $_POST["message"];
-
-              $toEmail = "sphe.mlu@gmail.com";
-              $mailHeaders = "From: " . $name . "<". $email .">\r\n";
-              if(mail($toEmail, $subject, $content, $mailHeaders)) {
-                  $message = "Your contact information is received successfully.";
-                  $type = "success";
-              }
-            }
-            require_once "contact.php";
-        ?>
-
-
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="#" autocomplete="off" method="post">
+          <form action="" method="post" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
@@ -123,7 +134,7 @@
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" name="submit" value="Send" class="btn" />
           </form>
         </div>
       </div>
