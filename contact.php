@@ -157,7 +157,7 @@
 </body>
 </html>
 <?php
-if(!empty($_POST["send"])) {
+if(!empty($_POST["Send"])) {
 	$name = $_POST["name"];
 	$email = $_POST["email"];
 	$subject = $_POST["subject"];
