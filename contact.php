@@ -83,7 +83,7 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="#" autocomplete="off" method="post>
+          <form action="#" autocomplete="off" method="post">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
