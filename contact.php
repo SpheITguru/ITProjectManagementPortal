@@ -22,7 +22,7 @@
     if ($mail) {
       echo "<script>alert('Mail Send.');</script>";
     }else {
-      echo "Mail Not Send.";
+      echo "<script>alert('Mail Not Send.');</script>";
     }
   }
 ?>
