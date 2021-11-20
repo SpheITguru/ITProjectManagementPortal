@@ -5,7 +5,7 @@
     $subject = $_POST["subject"];
     $message = $_POST["message"];
 
-    $to = $email;
+    $to = "sphe.mlu@gmail.com";
     //$subject = $message;
 
     $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
@@ -15,7 +15,7 @@
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
     // More headers
-    $headers .= 'From: sphe.mlu@gmail.com';
+    $headers .= 'From: IT Portal';
 
     $mail = mail($to,$subject,$message,$headers);
 
