@@ -2,13 +2,13 @@
   if (isset($_POST["submit"])) {
     $username = $_POST["name"];
     $email = $_POST["email"];
-    $subject = $_POST["subject"];
+    $phone = $_POST["subject"];
     $message = $_POST["message"];
 
     $to = "sphe.mlu@gmail.com";
     /$subject = $message;
 
-    $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message: " . $message;
+    $message = "Name: {$username} Email: {$email} Subject: {$phone}  Message: " . $message;
 
     // Always set content-type when sending HTML email
     $headers = "MIME-Version: 1.0" . "\r\n";
