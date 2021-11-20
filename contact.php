@@ -1,5 +1,5 @@
 <?php
-  if (isset($_POST["Send"])) {
+  if (isset($_POST["submit"])) {
     echo "Submit is pressed";
     $username = $_POST["name"];
     $email = $_POST["email"];
