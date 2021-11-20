@@ -1,12 +1,30 @@
-
 <?php
-$toEmail = "sphe.mlu@gmail.com";
-$mailHeaders = "From: " ."From: IT Portal" . "<". $_POST["email"] .">\r\n";
-if(mail($toEmail, $_POST["subject"], $_POST["message"], $mailHeaders)) {
-echo"<p class='success'>Contact Mail Sent.</p>";
-} else {
-echo"<p class='Error'>Problem in Sending Mail.</p>";
-}
+  if (isset($_POST["submit"])) {
+    $username = $_POST["name"];
+    $email = $_POST["email"];
+    $subject = $_POST["subject"];
+    $message = $_POST["message"];
+
+    $to = "sphe.mlu@gmail.com";
+    //$subject = $message;
+
+    $message = "Name: {$username} Email: {$email} Subject: {$subject}  Message:   {$message}";
+
+    // Always set content-type when sending HTML email
+    //$headers = "MIME-Version: 1.0" . "\r\n";
+    //$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    // More headers
+    $headers = "From: IT Portal";
+
+    $mail = mail($to,$subject,$message,$headers);
+
+    if ($mail) {
+      echo "<script>alert('Mail Send.');</script>";
+    }else {
+      echo "<script>alert('Mail Not Send.');</script>";
+    }
+  }
 ?>
 
 <!DOCTYPE html>
