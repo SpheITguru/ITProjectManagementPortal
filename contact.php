@@ -1,13 +1,12 @@
 <?php
   if (isset($_POST["submit"])) {
-    echo "Submit is pressed";
     $username = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["subject"];
     $message = $_POST["message"];
 
     $to = "sphe.mlu@gmail.com";
-    $subject = $message;
+    //$subject = $message;
 
     $message = "Email: {$email} Subject: {$subject}  Message: " . $message;
 
