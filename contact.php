@@ -79,6 +79,24 @@
           </div>
         </div>
 
+        <?php
+            if(!empty($_POST["Send"])) {
+              $name = $_POST["name"];
+              $email = $_POST["email"];
+              $subject = $_POST["subject"];
+              $content = $_POST["message"];
+
+              $toEmail = "sphe.mlu@gmail.com";
+              $mailHeaders = "From: " . $name . "<". $email .">\r\n";
+              if(mail($toEmail, $subject, $content, $mailHeaders)) {
+                  $message = "Your contact information is received successfully.";
+                  $type = "success";
+              }
+            }
+            require_once "contact.php";
+        ?>
+
+
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
@@ -156,19 +174,3 @@
     
 </body>
 </html>
-<?php
-if(!empty($_POST["Send"])) {
-	$name = $_POST["name"];
-	$email = $_POST["email"];
-	$subject = $_POST["subject"];
-	$content = $_POST["message"];
-
-	$toEmail = "sphe.mlu@gmail.com";
-	$mailHeaders = "From: " . $name . "<". $email .">\r\n";
-	if(mail($toEmail, $subject, $content, $mailHeaders)) {
-	    $message = "Your contact information is received successfully.";
-	    $type = "success";
-	}
-}
-require_once "contact.php";
-?>
