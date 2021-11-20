@@ -76,7 +76,7 @@
 
           <div class="info">
             <div class="information">
-              <img src="images/img/location.png" class="icon" alt="" />
+              <img src="img/location.png" class="icon" alt="" />
               <p>185 Steve Biko Road, Durban 4000</p>
             </div>
             <div class="information">
