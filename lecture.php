@@ -102,14 +102,7 @@ require_once('connection.php');
 	<!-- This is a comment for column -->
 	</div>   
 
-    <h2>SUBMISSION</h2>
-
-		<form class="form-inline" action="/action_page.php">
-			<label for="email">Tusk Name:</label>
-			<input type="name" id="email" placeholder="Tusk Name" name="tusk_name">
-			<input type="file" id="myFile" name="filename">
-			<button type="submit">Submit</button>
-		</form>
+    <br>
 
     <h5>Nov , 2021</h5>
 	<!-- This is a comment for left table -->
