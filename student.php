@@ -84,13 +84,7 @@ require_once('connection.php');
 		<br>
 		<input type="submit" name="submit">
 	</form>
-	<h4>Project Idea: Approved</h4>
-    <form class="form-inline">
-		<input type="name" name="project_name" placeholder="Project Name"><br><br>
-		<textarea  name="project_description" placeholder="Project Description" rows="4" cols="23"></textarea>
-		<br>
-		<input type="submit" name="submit">
-	</form>
+	<br>
   </div>
   <div class="main">
     <h2>Search an Idea</h2>
