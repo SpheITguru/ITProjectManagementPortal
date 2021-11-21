@@ -1,38 +1,3 @@
-<?php
-
-    require_once('connection.php');
-
-    if(isset($_POST['submit']))
-    {
-        $fname = mysqli_real_escape_string($con, $_POST['firstname']);
-        $lname = mysqli_real_escape_string($con, $_POST['lastname']);
-        $email = mysqli_real_escape_string($con, $_POST['email']);
-        $password = mysqli_real_escape_string($con, $_POST['password']);
-        $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
-        $role = mysqli_real_escape_string($con, $_POST['role']);
-
-        if($password!=$cpassword)
-        {
-              echo 'Password Not Matching';
-        }else 
-        {
-            $pass=md5($password);
-            $sql = "insert into users (fname,lname,email,pass,role) values ('$fname', '$lname', '$email', '$pass', '$role')";
-            $result = mysqli_query($con, $sql);
-            
-            if($result)
-            {
-                echo 'Your Record has been saved in the Database';
-            }
-            else 
-            {
-                echo 'Check your inputs';
-            }
-        }
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +11,40 @@
     
     <form action = "signup.php" method = "POST">
         <h1>Sign Up</h1>
+        <?php
+
+            require_once('connection.php');
+
+            if(isset($_POST['submit']))
+            {
+                $fname = mysqli_real_escape_string($con, $_POST['firstname']);
+                $lname = mysqli_real_escape_string($con, $_POST['lastname']);
+                $email = mysqli_real_escape_string($con, $_POST['email']);
+                $password = mysqli_real_escape_string($con, $_POST['password']);
+                $cpassword = mysqli_real_escape_string($con, $_POST['cpassword']);
+                $role = mysqli_real_escape_string($con, $_POST['role']);
+
+                if($password!=$cpassword)
+                {
+                    echo 'Password Not Matching';
+                }else 
+                {
+                    $pass=md5($password);
+                    $sql = "insert into users (fname,lname,email,pass,role) values ('$fname', '$lname', '$email', '$pass', '$role')";
+                    $result = mysqli_query($con, $sql);
+                    
+                    if($result)
+                    {
+                        echo 'Your Record has been saved in the Database';
+                    }
+                    else 
+                    {
+                        echo 'Check your inputs';
+                    }
+                }
+        }
+
+?>
         <input type="text" name="firstname" placeholder="Firstname" required>
         <input type="text" name="lastname" placeholder="Lastname" required>
         <input type="email" name="email" placeholder="Email" required>
