@@ -46,7 +46,24 @@ require_once('connection.php');
 	
 	</div>
 	<form class="form-inline">
-	<input type="name" name="team_name" placeholder="Enter your student Id"><br>
+	<?php
+        if (isset($_POST['submit'])){
+			$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
+			$sql = "update team set (ystudent = $ystudent) where (fname = $_SESSION['fname'], lname = $_SESSION['lname'], email = $_SESSION['email'])";
+			$result = mysqli_query($con, $sql);
+				
+				if($result)
+				{
+					echo 'Your Record has been saved in the Database';
+				}
+				else 
+				{
+					echo 'Check your inputs';
+				}
+			 }
+
+		?>
+	<input type="name" name="your_id" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit">
 	</form>
