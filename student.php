@@ -86,11 +86,11 @@ require_once('connection.php');
 		
 			if(isset($_POST['submit_team']))
 			{
-				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
-				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
+				$ystudent = mysqli_real_escape_string($con, $_POST['student_1']);
+				$pstudent = mysqli_real_escape_string($con, $_POST['student_2']);
 				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
 								
-				$sql = "insert into team (tname,ystudent_id,pstudent_id) values ('$tname', '$ystudent', '$ystudent')";
+				$sql = "insert into team (tname,student_1,student_2) values ('$tname', '$ystudent', '$ystudent')";
 				$result = mysqli_query($con, $sql);
 				
 				if($result)
@@ -105,8 +105,8 @@ require_once('connection.php');
 
 		?>
 		
-		<input type="text" name="your_id" placeholder="Your student number"><br>
-		<input type="text" name="partnet_id" placeholder="Partner student number"><br>
+		<input type="text" name="student_1" placeholder="Your student number"><br>
+		<input type="text" name="student_2" placeholder="Partner student number"><br>
 		<input type="text" name="team_name" placeholder="Team Name"><br>
 		<br>
 		<input type="submit" name="submit_team">
