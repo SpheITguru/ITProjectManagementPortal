@@ -49,8 +49,8 @@ require_once('connection.php');
 	<?php
 		require_once('connection.php');
         if (isset($_POST['submit'])){
-			$ystudent = mysqli_real_escape_string($con, $_POST['your_studentID']);
-			$sql = "update team set (ystudent = $ystudent) where (fname = $_SESSION['fname'] AND lname = $_SESSION['lname'] AND email = $_SESSION['email'])";
+			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
+			$sql = "update team set (ystudent = $studentID) where (fname = $_SESSION['fname'] AND lname = $_SESSION['lname'] AND email = $_SESSION['email'])";
 			$result = mysqli_query($con, $sql);
 				
 				if($result)
