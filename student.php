@@ -45,7 +45,7 @@ require_once('connection.php');
 		</table>
 	
 	</div>
-	<form class="form-inline">
+	<form class="form-inline" method="POST">
 	<?php
 		require_once('connection.php');
 		
