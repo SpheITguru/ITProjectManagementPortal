@@ -46,7 +46,7 @@ require_once('connection.php');
 	
 	</div>
 	<form class="form-inline">
-	<input type="name" name="team_name" placeholder=<?php echo $_SESSION['student']; ?>><br>
+	<input type="name" name="team_name" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit">
 	</form>
