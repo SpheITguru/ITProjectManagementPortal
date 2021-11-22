@@ -51,7 +51,7 @@ require_once('connection.php');
 		
         if (isset($_POST['submit'])){
 			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
-			$sql = "UPDATE users SET (ystudent = '$studentID') WHERE (fname = $_SESSION['fname'])";
+			$sql = ($con,"UPDATE users SET (ystudent = '$studentID') WHERE (fname = $_SESSION['fname'])");
 			}/*
 			$result = mysqli_query($con, $sql);
 				
