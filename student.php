@@ -55,7 +55,7 @@ require_once('connection.php');
 			
 			$result = mysqli_query($con, $sql);
 			
-				if($result1)
+				if($result)
 				{
 					echo 'Your Record has been saved in the Database';
 				}
