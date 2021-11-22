@@ -48,8 +48,8 @@ require_once('connection.php');
 	<form class="form-inline">
 	<?php
         if (isset($_POST['submit'])){
-			$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
-			$sql = "update team set (ystudent = $ystudent) where (fname = $_SESSION['fname'], lname = $_SESSION['lname'], email = $_SESSION['email'])";
+			$ystudent = mysqli_real_escape_string($con, $_POST['your_studentID']);
+			$sql = "update team set (ystudent = $ystudent) where (fname = $_SESSION['fname'] AND lname = $_SESSION['lname'] AND email = $_SESSION['email'])";
 			$result = mysqli_query($con, $sql);
 				
 				if($result)
@@ -63,7 +63,7 @@ require_once('connection.php');
 			 }
 
 		?>
-	<input type="name" name="your_id" placeholder="Enter your student Id"><br>
+	<input type="name" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit">
 	</form>
