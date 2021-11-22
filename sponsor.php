@@ -4,6 +4,27 @@ session_start();
 //include "db_conn.php";
 require_once('connection.php');
 ?>
+<?php
+
+require_once('connection.php');
+
+if(isset($_POST['submit_idea']))
+{
+	$idea = mysqli_real_escape_string($con, $_POST['your_id']);
+	$idea_description = mysqli_real_escape_string($con, $_POST['project_description']);
+	$sql = "insert into ideas (new_idea,idea_info) values ('$idea', '$idea_description')";
+    $result = mysqli_query($con, $sql);
+    
+    if($result)
+    {
+        echo 'Your Record has been saved in the Database';
+    }
+    else 
+    {
+        echo 'Check your inputs';
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,14 +92,14 @@ require_once('connection.php');
 	<!-- This is a comment for column -->
 	<div class="row">
 		<div class="column">
-			<form class="form-inline">
+			<form class="form-inline" method="POST">
 			<input type="name" name="your_id" placeholder="Add Idea">		
 		</div>
 		<div class="column">
 			
 				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>
 				<br>
-				<input type="submit" name="submit">
+				<input type="submit" name="submit_idea">
 			</form>
 		</div>
 	</div>
