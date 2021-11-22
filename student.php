@@ -48,6 +48,7 @@ require_once('connection.php');
 	<form class="form-inline">
 	<?php
 		require_once('connection.php');
+		/*
         if (isset($_POST['submit'])){
 			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
 			$sql = "update team set ystudent = '$studentID' where fname = $_SESSION['fname'] AND lname = $_SESSION['lname'] AND email = $_SESSION['email']";
@@ -62,7 +63,7 @@ require_once('connection.php');
 					echo 'Check your inputs';
 				}
 			 }
-
+			 */
 		?>
 	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
