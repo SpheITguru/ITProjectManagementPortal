@@ -141,7 +141,7 @@ require_once('connection.php');
 			<button type="submit">Submit</button>
 		</form>
 
-    <h5>Nov , 2021</h5>
+    <h5>Nov , 2021, <?phpecho "Today is " . date("l");?></h5>
 	<!-- This is a comment for left table -->
     <div class="fakeimg" style="height:270px;">
 		<table>
