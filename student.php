@@ -45,6 +45,11 @@ require_once('connection.php');
 		</table>
 	
 	</div>
+	<form class="form-inline">
+	<input type="name" name="team_name" placeholder="Enter your student Id"><br>
+		<br>
+		<input type="submit" name="submit">
+	</form>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
 	<form class="form-inline" method="POST">
