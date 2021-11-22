@@ -65,7 +65,7 @@ require_once('connection.php');
   </div>
   <div class="main">
     <h2>Add an Idea</h2>
-    <h5>Nov , 2021</h5>
+    <h5>Nov , 2021, <?php echo "Today is " . date("l");?></h5>
     <div class="fakeimg" style="height:200px;">
 	
 	<!-- This is a comment for column -->
