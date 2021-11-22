@@ -49,7 +49,7 @@ require_once('connection.php');
 	<?php
 		require_once('connection.php');
 		
-        if (isset($_POST['submit'])){
+        if (isset($_POST['submit_id'])){
 			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
 			$sql = ("UPDATE users SET (ystudent = '$studentID') WHERE (fname = '".$_SESSION['fname']."')");
 			
@@ -68,7 +68,7 @@ require_once('connection.php');
 		?>
 	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
-		<input type="submit" name="submit">
+		<input type="submit" name="submit_id">
 	</form>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
@@ -77,7 +77,7 @@ require_once('connection.php');
 		<?php
 			require_once('connection.php');						     
 		
-			if(isset($_POST['submit']))
+			if(isset($_POST['submit_team']))
 			{
 				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
 				$pstudent = mysqli_real_escape_string($con, $_POST['partner_id']);
@@ -102,7 +102,7 @@ require_once('connection.php');
 		<input type="text" name="partnet_id" placeholder="Partner student number"><br>
 		<input type="text" name="team_name" placeholder="Team Name"><br>
 		<br>
-		<input type="submit" name="submit">
+		<input type="submit" name="submit_team">
 	</form>
 	<br>
   </div>
