@@ -64,7 +64,7 @@ require_once('connection.php');
 			 }
 
 		?>
-	<input type="name" name="your_studentID" placeholder="Enter your student Id"><br>
+	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit">
 	</form>
