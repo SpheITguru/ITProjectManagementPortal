@@ -90,7 +90,7 @@ require_once('connection.php');
 				$pstudent = mysqli_real_escape_string($con, $_POST['student_2']);
 				$tname = mysqli_real_escape_string($con, $_POST['team_name']);
 								
-				$sql = "insert into team (tname,student_1,student_2) values ('$tname', '$ystudent', '$ystudent')";
+				$sql = "insert into team (tname,student_1,student_2) values ('$tname', '$ystudent', '$pstudent')";
 				$result = mysqli_query($con, $sql);
 				
 				if($result)
