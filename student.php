@@ -50,10 +50,10 @@ require_once('connection.php');
 		require_once('connection.php');
         if (isset($_POST['submit'])){
 			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
-			$sql = "update team set (ystudent = $studentID) where (email = $_SESSION['email'])";
-			$result = mysqli_query($con, $sql);
+			$sql1 = "update team set (ystudent = $studentID) where (email = $_SESSION['email'])";
+			$result1 = mysqli_query($con, $sql1);
 				
-				if($result)
+				if($result1)
 				{
 					echo 'Your Record has been saved in the Database';
 				}
