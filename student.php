@@ -3,7 +3,27 @@ session_start();
 require_once('connection.php');
 ?>
 
-
+<?php
+		require_once('connection.php');
+		
+        if (isset($_POST['submit_id'])){
+			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
+			$sql = "UPDATE users SET ystudent = '" . $studentID . "' WHERE fname = '" . $_SESSION['fname'] . "' AND email = '" . $_SESSION['email'] . "'";
+			echo $sql;
+			$result = mysqli_query($con, $sql);
+			
+				if($result)
+				{
+					echo 'Your Record has been saved in the Database';
+					$_SESSION["student"] = $studentID;
+				}
+				else 
+				{
+					echo 'Check your inputs';
+				}
+			 }
+			 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,26 +66,7 @@ require_once('connection.php');
 	
 	</div>
 	<form class="form-inline" method="POST">
-	<?php
-		require_once('connection.php');
-		
-        if (isset($_POST['submit_id'])){
-			$studentID = mysqli_real_escape_string($con, $_POST['your_studentID']);
-			$sql = "UPDATE users SET ystudent = '" . $studentID . "' WHERE fname = '" . $_SESSION['fname'] . "' AND email = '" . $_SESSION['email'] . "'";
-			echo $sql;
-			$result = mysqli_query($con, $sql);
-			
-				if($result)
-				{
-					echo 'Your Record has been saved in the Database';
-				}
-				else 
-				{
-					echo 'Check your inputs';
-				}
-			 }
-			 
-		?>
+	
 	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit_id">
