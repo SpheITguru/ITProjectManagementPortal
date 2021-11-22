@@ -46,25 +46,6 @@ require_once('connection.php');
 	
 	</div>
 	<form class="form-inline">
-	<?php
-			require_once('connection.php');						     
-		
-			if(isset($_POST['submit']))
-			{
-				$ystudent = mysqli_real_escape_string($con, $_POST['your_id']);
-				$sql = "insert into users (ystudent) where email is $_SESSION['email'] values ('$ystudent') ";
-				$result = mysqli_query($con, $sql);
-			}
-			if($result)
-				{
-					echo 'Your Record has been saved in the Database';
-				}
-				else 
-				{
-					echo 'Check your inputs';
-				}
-
-	?>
 	<input type="name" name="your_id" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit">
