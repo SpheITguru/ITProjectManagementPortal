@@ -65,12 +65,18 @@ require_once('connection.php');
 		</table>
 	
 	</div>
+	<?php 
+	if (empty($_SESSION['student'])) {
+	?>
 	<form class="form-inline" method="POST">
 	
 	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
 		<input type="submit" name="submit_id">
 	</form>
+	<?php 
+	}
+	?>
 	<!-- This is a comment for left table -->
     <h3>Project Team</h3>
 	<form class="form-inline" method="POST">
