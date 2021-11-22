@@ -54,7 +54,7 @@ require_once('connection.php');
 			$sql = ("UPDATE users SET (ystudent = '$studentID') WHERE (fname = '".$_SESSION['fname']."')");
 			
 			$result = mysqli_query($con, $sql);
-			}/*
+			
 				if($result1)
 				{
 					echo 'Your Record has been saved in the Database';
@@ -64,7 +64,7 @@ require_once('connection.php');
 					echo 'Check your inputs';
 				}
 			 }
-			 */
+			 
 		?>
 	<input type="text" name="your_studentID" placeholder="Enter your student Id"><br>
 		<br>
