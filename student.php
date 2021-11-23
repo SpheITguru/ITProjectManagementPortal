@@ -3,10 +3,7 @@ session_start();
 require_once('connection.php');
 
 ?>
-<?php
-	$mysqli = NEW MySQLi(getenv("DB_HOST"),getenv("DB_USER"),getenv("DB_PASSWORD"),'projectdb');
-	$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
-?>
+
 
 <?php
 		require_once('connection.php');
