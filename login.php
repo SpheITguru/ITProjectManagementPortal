@@ -29,7 +29,7 @@ require_once('connection.php');
             $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
             $row  = mysqli_fetch_array($select);
 
-            $select_idea = mysqli_query($con," SELECT * FROM ideas WHERE email = '$email' ");
+            $select_idea = mysqli_query($con," SELECT * FROM ideas WHERE sponsor = '$email' ");
             $row_idea  = mysqli_fetch_array($select_idea);
 
 
