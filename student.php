@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('connection.php');
-$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
+$resultSet = $mysqli->query("SELECT approved_idea FROM ideas");
 ?>
 
 <?php
