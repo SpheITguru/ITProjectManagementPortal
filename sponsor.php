@@ -97,7 +97,7 @@ if(isset($_POST['submit_idea']))
 		</div>
 		<div class="column">
 			
-				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>
+				<textarea  name="project_description" placeholder="<?php echo $_SESSION['lname']; ?>" rows="8" cols="70"></textarea>
 				<br>
 				<input type="submit" name="submit_idea">
 			</form>
