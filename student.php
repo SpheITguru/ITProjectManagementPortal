@@ -127,7 +127,6 @@ require_once('connection.php');
 				$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
 			?>
 				<select name="idea">
-					<option value="0">Select idea:</option>
 					<?php
 						while ($rows = $resultSet_fetch_assoc())
 						{
