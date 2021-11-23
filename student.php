@@ -128,7 +128,7 @@ require_once('connection.php');
 				<th>Idea Description</th>
 			</tr>
 			<tr>
-				<td>radio button</td>
+				<td><input type="radio" id="student" name="users"></td>
 				<td>grass cut</td>
 				<td>cutting grass</td>
 			</tr>
