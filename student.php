@@ -142,7 +142,7 @@ require_once('connection.php');
 			$num=mysqli_numrows($result);
 			//echo "test";
 			//echo $num;
-			while(false) {
+			if(false) {
 			
 				?>
 				<tr>
