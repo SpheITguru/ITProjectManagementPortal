@@ -121,24 +121,18 @@ require_once('connection.php');
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
 	<div class="row">
-		<div class="column">
-			<div class="custom-select" style="width:200px;">
-			
-			<select>
-					<option value="0">Select idea:</option>
-					<option value="1">Online Shopping</option>
-					<option value="2">Logistic</option>
-				</select>
-			</div>
-		
-		</div>
-		<div class="column">
-			<form class="form-inline">
-				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"></textarea>
-				<br>
-				<input type="submit" name="submit">
-			</form>
-		</div>
+	<table>
+			<tr>
+				<th>Choose</th>
+				<th>Idea name</th>
+				<th>Idea Description</th>
+			</tr>
+			<tr>
+				<td>radio button</td>
+				<td>grass cut</td>
+				<td>cutting grass</td>
+			</tr>
+		</table>
 	</div>
 	<!-- This is a comment for column -->
 	</div>   
