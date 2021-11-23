@@ -65,7 +65,7 @@ if(isset($_POST['submit_idea']))
 	
 	</div>
 	<!-- This is a comment for left table -->
-    <h3>Project Team LION</h3>
+    <h3>Project Team <?php echo $_SESSION['team']; ?></h3>
 	<table>
 			<tr>
 				<th>Name</th>
