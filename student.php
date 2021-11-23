@@ -131,7 +131,7 @@ require_once('connection.php');
 						while ($rows = $resultSet_fetch_assoc())
 						{
 							$idea = $rows['approved_idea'];
-							echo "<option value='$idea'>$idea</option>";
+							echo "<option name='$idea'>$idea</option>";
 						}
 					?>
 				</select>
