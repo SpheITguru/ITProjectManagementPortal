@@ -121,18 +121,33 @@ require_once('connection.php');
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
 	<div class="row">
-	<table>
+	<form class="form-inline" action="/student.php">
+		<table>
 			<tr>
 				<th>Choose</th>
 				<th>Idea name</th>
 				<th>Idea Description</th>
 			</tr>
+			<?php
+			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
+            $row_idea  = mysqli_fetch_array($select_idea);
+			$num=mysql_numrows($select_idea);
+
+			echo $num;
+			while(false) {
+			
+			?>
 			<tr>
 				<td><input type="radio" id="student" name="users"></td>
 				<td>grass cut</td>
 				<td>cutting grass</td>
 			</tr>
+			<?php
+				}
+			?>
 		</table>
+		<button type="submit" name="submit_idea">Submit</button>
+		</form>
 	</div>
 	<!-- This is a comment for column -->
 	</div>   

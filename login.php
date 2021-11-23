@@ -36,6 +36,7 @@ require_once('connection.php');
             $row_team  = mysqli_fetch_array($select_team);
 
 
+
             if(is_array($row)) {
                 $_SESSION["email"] = $row['email'];
                 $_SESSION["fname"] = $row['fname'];
