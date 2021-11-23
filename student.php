@@ -142,7 +142,7 @@ require_once('connection.php');
 			$num=mysqli_numrows($result);
 			//echo "test";
 			//echo $num;
-			if(false) {
+			//if(false) {
 			
 				?>
 				<tr>
@@ -151,7 +151,7 @@ require_once('connection.php');
 					<td>cutting grass</td>
 				</tr>
 				<?php
-					}
+					//}
 				?>
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
