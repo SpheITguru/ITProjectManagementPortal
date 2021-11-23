@@ -78,7 +78,7 @@ require_once('connection.php');
 	}
 	?>
 	<!-- This is a comment for left table -->
-    <h3>Project Team <?php echo $_SESSION['team']; ?></h3>
+    <h3>Project Members</h3>
 	<form class="form-inline" method="POST">
 		
 		<?php
