@@ -121,21 +121,14 @@ require_once('connection.php');
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
 	<div class="row">
-	<form class="form-inline" method="POST">
-		<table>
-			<tr>
-				<th>Choose</th>
-				<th>Idea name</th>
-				<th>Idea Description</th>
-			</tr>
-			<?php
+	<?php
 			//$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
             //$row_idea  = mysqli_fetch_array($select_idea);
 			//$num=mysql_numrows($select_idea);
 			//echo "test";
 			//echo $num;	
 			
-			//$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
+			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
 			//$result = mysqli_query($select_idea);
 			//$row = mysqli_fetch_assoc($result);
 			//$id = $row['id'];
@@ -144,7 +137,14 @@ require_once('connection.php');
 			//echo $num;
 			//if(false) {
 			
-			?>
+	?>
+	<form class="form-inline" method="POST">
+		<table>
+			<tr>
+				<th>Choose</th>
+				<th>Idea name</th>
+				<th>Idea Description</th>
+			</tr>
 				
 				
 		</table>
