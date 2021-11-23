@@ -73,7 +73,7 @@ if(isset($_POST['submit_idea']))
 				<th>Student ID</th>
 			</tr>
 			<tr>
-				<td><?php echo $_SESSION['sponsor']; ?></td>
+				<td>Siphephelo</td>
 				<td>Mlungwana</td>
 				<td>21958988</td>
 			</tr>
