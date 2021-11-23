@@ -132,7 +132,7 @@ require_once('connection.php');
 			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
             $row_idea  = mysqli_fetch_array($select_idea);
 			$num=mysql_numrows($select_idea);
-
+			echo "test";
 			echo $num;			
 			?>
 		</table>
