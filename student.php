@@ -3,6 +3,10 @@ session_start();
 require_once('connection.php');
 
 ?>
+<?php
+	$mysqli = NEW MySQLi(getenv("DB_HOST"),getenv("DB_USER"),getenv("DB_PASSWORD"),'projectdb');
+	$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
+?>
 
 <?php
 		require_once('connection.php');
@@ -122,14 +126,15 @@ require_once('connection.php');
 	<div class="row">
 		<div class="column">
 			<div class="custom-select" style="width:200px;">
-			<?php
-				$mysqli = NEW MySQLi(getenv("DB_HOST"),getenv("DB_USER"),getenv("DB_PASSWORD"),'projectdb');
-				$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
-			?>
-				<select>
-					<option value="0">Select idea:</option>
-					<option value="1">Online Shopping</option>
-					<option value="2">Logistic</option>
+			
+				<select name="idea">
+					<?php
+						while ($rows = $resultSet_fetch_assoc())
+						{
+							$idea = $rows['approved_idea'];
+							echo "<option name='$idea'>$idea</option>";
+						}
+					?>
 				</select>
 			</div>
 		
