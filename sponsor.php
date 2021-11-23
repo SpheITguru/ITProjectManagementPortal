@@ -100,7 +100,7 @@ if(isset($_POST['submit_idea']))
 				<textarea  name="project_description" placeholder="<?php echo $_SESSION['idea_info']; ?>" rows="8" cols="70"></textarea>
 				<br>
 				<?php 
-				if (empty($_SESSION['student'])) {
+				if (empty($_SESSION['idea'])) {
 				?>
 				<input type="submit" name="submit_idea">
 				<?php
