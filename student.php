@@ -148,7 +148,7 @@ require_once('connection.php');
 			
 			?>
 			<tr>
-				<td><input type="radio" id="student" name="users"></td>
+				<td><input type="radio" id="student" name="idea" value="<?php echo $row_idea['approved_idea']; ?>"></td>
 				<td><?php echo $row_idea['approved_idea']; ?></td>
 				<td><?php echo $row_idea['idea_info']; ?></td>
 			</tr>
