@@ -136,12 +136,12 @@ require_once('connection.php');
 			//echo $num;	
 			
 			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
-			$result = mysqli_query($select_idea);
-			$row = mysqli_fetch_assoc($result);
+			//$result = mysqli_query($select_idea);
+			//$row = mysqli_fetch_assoc($result);
 			//$id = $row['id'];
-			$num=mysqli_numrows($result);
+			//$num=mysqli_numrows($result);
 			echo "test";
-			echo $num;
+			//echo $num;
 			?>
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
