@@ -144,12 +144,8 @@ require_once('connection.php');
 			//echo $num;
 			//if(false) {
 			
-				?>
-				<tr>
-					<td><input type="radio" id="student" name="users"></td>
-					<td>grass cut</td>
-					<td>cutting grass</td>
-				</tr>
+			?>
+				
 				
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
