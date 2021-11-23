@@ -134,16 +134,6 @@ require_once('connection.php');
 			$num=mysql_numrows($select_idea);
 
 			echo $num;
-			while(false) {
-			
-			?>
-			<tr>
-				<td><input type="radio" id="student" name="users"></td>
-				<td>grass cut</td>
-				<td>cutting grass</td>
-			</tr>
-			<?php
-				}
 			?>
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
