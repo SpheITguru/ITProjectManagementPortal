@@ -129,11 +129,19 @@ require_once('connection.php');
 				<th>Idea Description</th>
 			</tr>
 			<?php
-			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
-            $row_idea  = mysqli_fetch_array($select_idea);
-			$num=mysql_numrows($select_idea);
+			//$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
+            //$row_idea  = mysqli_fetch_array($select_idea);
+			//$num=mysql_numrows($select_idea);
+			//echo "test";
+			//echo $num;	
+			
+			$sql = $con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL";
+			$result = mysql_query($sql);
+			$row = mysql_fetch_assoc($result);
+			//$id = $row['id'];
+			$num=mysql_numrows($result);
 			echo "test";
-			echo $num;			
+			echo $num;
 			?>
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
