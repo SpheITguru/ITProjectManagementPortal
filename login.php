@@ -29,6 +29,9 @@ require_once('connection.php');
             $select = mysqli_query($con," SELECT * FROM users WHERE email = '$email' AND pass = '$pass' ");
             $row  = mysqli_fetch_array($select);
 
+            $select_idea = mysqli_query($con," SELECT * FROM ideas ");
+            $row_idea  = mysqli_fetch_array($select_idea);
+
 
             if(is_array($row)) {
                 $_SESSION["email"] = $row['email'];
@@ -36,6 +39,7 @@ require_once('connection.php');
                 $_SESSION["lname"] = $row['lname'];        
                 $_SESSION["role"] = $row['role'];
                 $_SESSION["student"] = $row['ystudent'];
+                $_SESSION["sponsor"] = $row_idea['sponsor'];
                 if(isset($_SESSION["email"]) && $row['role']=="student"){
                     header("Location:student.php");
                 }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
