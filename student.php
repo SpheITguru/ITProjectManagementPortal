@@ -122,7 +122,7 @@ $resultSet = $mysqli->query("SELECT approved_idea FROM ideas");
 	<div class="row">
 		<div class="column">
 			<div class="custom-select" style="width:200px;">
-				<select>
+				<select name="idea">
 					<option value="0">Select idea:</option>
 					<?php
 						while ($rows = $resultSet->fetch_assoc()
