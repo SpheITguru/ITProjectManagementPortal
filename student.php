@@ -130,11 +130,7 @@ require_once('connection.php');
 			
 			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
 			$row_idea  = mysqli_fetch_array($select_idea);
-
 		
-			
-			
-			
 	?>
 	<form class="form-inline" method="POST">
 		<table>
