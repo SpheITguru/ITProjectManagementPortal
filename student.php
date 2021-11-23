@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('connection.php');
+$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
 ?>
 
 <?php
@@ -123,8 +124,13 @@ require_once('connection.php');
 			<div class="custom-select" style="width:200px;">
 				<select>
 					<option value="0">Select idea:</option>
-					<option value="1">Online Shopping</option>
-					<option value="2">Logistic</option>
+					<?php
+						while ($rows = $resultSet->fetch_assoc()
+						{
+							$idea = $rows['approved_idea'];
+							echo "<option value='$idea'>$idea</option>";
+						})
+					?>
 				</select>
 			</div>
 		
