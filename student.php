@@ -121,7 +121,7 @@ require_once('connection.php');
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
 	<div class="row">
-	<form class="form-inline" action="/student.php">
+	<form class="form-inline" method="POST">
 		<table>
 			<tr>
 				<th>Choose</th>
