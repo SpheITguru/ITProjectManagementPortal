@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('connection.php');
-$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
+
 ?>
 
 <?php
@@ -122,6 +122,10 @@ $resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
 	<div class="row">
 		<div class="column">
 			<div class="custom-select" style="width:200px;">
+			<?php
+				$mysqli = NEW MySQLi(getenv("DB_HOST"),getenv("DB_USER"),getenv("DB_PASSWORD"),'projectdb');
+				$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
+			?>
 				<select name="idea">
 					<option value="0">Select idea:</option>
 					<?php
