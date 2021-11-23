@@ -32,6 +32,9 @@ require_once('connection.php');
             $select_idea = mysqli_query($con," SELECT * FROM ideas WHERE sponsor = '$email' ");
             $row_idea  = mysqli_fetch_array($select_idea);
 
+            $select_team = mysqli_query($con," SELECT * FROM team WHERE sponsor = '$email' ");
+            $row_team  = mysqli_fetch_array($select_team);
+
 
             if(is_array($row)) {
                 $_SESSION["email"] = $row['email'];
@@ -41,6 +44,7 @@ require_once('connection.php');
                 $_SESSION["student"] = $row['ystudent'];
                 $_SESSION["idea"] = $row_idea['new_idea'];
                 $_SESSION["idea_info"] = $row_idea['idea_info'];
+                $_SESSION["team"] = $row_idea['tname'];
                 if(isset($_SESSION["email"]) && $row['role']=="student"){
                     header("Location:student.php");
                 }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
