@@ -150,9 +150,7 @@ require_once('connection.php');
 					<td>grass cut</td>
 					<td>cutting grass</td>
 				</tr>
-				<?php
-					//}
-				?>
+				
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
 		</form>
