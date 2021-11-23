@@ -135,7 +135,7 @@ require_once('connection.php');
 			//echo "test";
 			//echo $num;	
 			
-			$sql = $con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL";
+			$sql = "SELECT * FROM `ideas` WHERE approved_idea is not NULL";
 			$result = mysql_query($sql);
 			$row = mysql_fetch_assoc($result);
 			//$id = $row['id'];
