@@ -12,7 +12,7 @@ if(isset($_POST['submit_idea']))
 {
 	$idea = mysqli_real_escape_string($con, $_POST['your_id']);
 	$idea_description = mysqli_real_escape_string($con, $_POST['project_description']);
-	$sql = "insert into ideas (new_idea,idea_info,sponsor) values ('$idea', '$idea_description', . '" $_SESSION['email'] "' )";
+	$sql = "insert into ideas (new_idea,idea_info,sponsor) values ('$idea', '$idea_description', '" . $_SESSION['email'] "' )";
     $result = mysqli_query($con, $sql);
     
     if($result)
