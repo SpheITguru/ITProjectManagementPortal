@@ -93,11 +93,11 @@ if(isset($_POST['submit_idea']))
 	<div class="row">
 		<div class="column">
 			<form class="form-inline" method="POST">
-			<input type="name" name="your_id" placeholder="Add Idea">		
+			<input type="name" name="your_id" placeholder="<?php echo $_SESSION['idea']; ?>">		
 		</div>
 		<div class="column">
 			
-				<textarea  name="project_description" placeholder="<?php echo $_SESSION['sponsor']; ?>" rows="8" cols="70"></textarea>
+				<textarea  name="project_description" placeholder="<?php echo $_SESSION['idea_info']; ?>" rows="8" cols="70"></textarea>
 				<br>
 				<input type="submit" name="submit_idea">
 			</form>
