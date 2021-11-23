@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('connection.php');
-$resultSet = $mysqli->query("SELECT approved_idea FROM ideas");
+$resultSet = $mysqli_query("SELECT approved_idea FROM ideas");
 ?>
 
 <?php
@@ -125,7 +125,7 @@ $resultSet = $mysqli->query("SELECT approved_idea FROM ideas");
 				<select name="idea">
 					<option value="0">Select idea:</option>
 					<?php
-						while ($rows = $resultSet->fetch_assoc())
+						while ($rows = $resultSet_fetch_assoc())
 						{
 							$idea = $rows['approved_idea'];
 							echo "<option value='$idea'>$idea</option>";
