@@ -133,7 +133,7 @@ require_once('connection.php');
 			//$row = mysqli_fetch_assoc($result);
 			//$id = $row['id'];
 			//$num=mysqli_numrows($result);
-			//echo "test";
+			echo "test";
 			//echo $num;
 			//if(false) {
 			
