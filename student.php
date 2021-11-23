@@ -131,15 +131,9 @@ require_once('connection.php');
 			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
 			$row_idea  = mysqli_fetch_array($select_idea);
 
-			if(is_array($row_idea)) {
-			echo $row_idea['new_idea'];
-			}
-
-			//$id = $row['id'];
-			//$num=mysqli_numrows($result);
-			//echo "test";
-			//echo $num;
-			//if(false) {
+		
+			
+			
 			
 	?>
 	<form class="form-inline" method="POST">
@@ -149,8 +143,18 @@ require_once('connection.php');
 				<th>Idea name</th>
 				<th>Idea Description</th>
 			</tr>
-				
-				
+			<?php
+			if(is_array($row_idea)) {
+			
+			?>
+			<tr>
+				<td><input type="radio" id="student" name="users"></td>
+				<td><?php echo $row_idea['approved_idea']; ?></td>
+				<td><?php echo $row_idea['idea_info']; ?></td>
+			</tr>
+			<?php
+				}
+			?>
 		</table>
 		<button type="submit" name="submit_idea">Submit</button>
 		</form>
