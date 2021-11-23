@@ -44,7 +44,7 @@ require_once('connection.php');
                 $_SESSION["student"] = $row['ystudent'];
                 $_SESSION["idea"] = $row_idea['new_idea'];
                 $_SESSION["idea_info"] = $row_idea['idea_info'];
-                $_SESSION["team"] = $row_idea['tname'];
+                $_SESSION["team"] = $row_team['tname'];
                 if(isset($_SESSION["email"]) && $row['role']=="student"){
                     header("Location:student.php");
                 }elseif(isset($_SESSION["email"]) && $row['role']=="sponsor"){
