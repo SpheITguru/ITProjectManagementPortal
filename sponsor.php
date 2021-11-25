@@ -67,7 +67,7 @@ if(isset($_POST['submit_idea']))
 	<!-- This is a comment for left table -->
 
 	<?php 
-	$email = $_SESSION['email']
+	$email = $_SESSION['email'];
 	$select = mysqli_query($con," SELECT * FROM team WHERE sponsor = '$email' ");
 	$row  = mysqli_fetch_array($select);
 
