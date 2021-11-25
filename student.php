@@ -106,12 +106,17 @@ require_once('connection.php');
 			 }
 
 		?>
-		
+		<?php
+			if(!empty($_SESSION['student'])) {
+		?>
 		<input type="text" name="student_1" placeholder="Your student number" required><br>
 		<input type="text" name="student_2" placeholder="Partner student number" required><br>
 		<input type="text" name="team_name" placeholder="Team Name" required><br>
 		<br>
 		<input type="submit" name="submit_team">
+		<?php
+			}
+		?>
 	</form>
 	<br>
   </div>
