@@ -80,7 +80,7 @@ require_once('connection.php');
 	}
 	?>
 	<!-- This is a comment for left table -->
-    <h3>Project Members</h3>
+    
 	<form class="form-inline" method="POST">
 		
 		<?php
@@ -113,6 +113,7 @@ require_once('connection.php');
 
 			if (empty($_SESSION['student']) && is_array($row_tm)) {
 		?>
+		<h3>Project Members</h3>
 		<input type="text" name="student_1" placeholder="Your student number" required><br>
 		<input type="text" name="student_2" placeholder="Partner student number" required><br>
 		<input type="text" name="team_name" placeholder="Team Name" required><br>
