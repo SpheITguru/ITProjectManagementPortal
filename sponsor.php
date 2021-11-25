@@ -73,10 +73,27 @@ if(isset($_POST['submit_idea']))
 
 	if(is_array($row)) {
 		$student1 = $row['student_1'];
-		echo $student1;
+		$student2 = $row['student_2'];
+		$tname = $row['tname'];
+	}
+
+	$select_user1 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student1' ");
+	$row_user1  = mysqli_fetch_array($select_user1);
+
+	if(is_array($row_user1)) {
+		$student_name1 = $row_user1['fname'];
+		$student_lname1 = $row_user1['lname'];
+	}
+
+	$select_user2 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student1' ");
+	$row_user2  = mysqli_fetch_array($select_user2);
+
+	if(is_array($row_user2)) {
+		$student_name2 = $row_user2['fname'];
+		$student_lname2 = $row_user2['lname'];
 	}
 	?>
-    <h3>Project Team <?php echo $_SESSION['team']; ?></h3>
+    <h3>Project Team <?php echo $tname; ?></h3>
 	<table>
 			<tr>
 				<th>Name</th>
@@ -84,14 +101,14 @@ if(isset($_POST['submit_idea']))
 				<th>Student ID</th>
 			</tr>
 			<tr>
-				<td>Siphephelo</td>
-				<td>Mlungwana</td>
-				<td>21958988</td>
+				<td><?php echo $student_name1;?></td>
+				<td><?php echo $student_lname1;?></td>
+				<td><?php echo $student1;?></td>
 			</tr>
 			<tr>
-				<td>Katleo</td>
-				<td>Rantle</td>
-				<td>21959243</td>
+				<td><?php echo $student_name2;?></td>
+				<td><?php echo $student_lname2;?></td>
+				<td><?php echo $student2;?></td>
 			</tr>
 		</table>
   </div>
