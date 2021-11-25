@@ -77,7 +77,7 @@ if(isset($_POST['submit_idea']))
 		$tname = $row['tname'];
 	}
 
-	$select_user1 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student1' ");
+	/*$select_user1 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student1' ");
 	$row_user1  = mysqli_fetch_array($select_user1);
 
 	if(is_array($row_user1)) {
@@ -91,7 +91,7 @@ if(isset($_POST['submit_idea']))
 	if(is_array($row_user2)) {
 		$student_name2 = $row_user2['fname'];
 		$student_lname2 = $row_user2['lname'];
-	}
+	}*/
 	?>
     <h3>Project Team <?php echo $tname; ?></h3>
 	<table>
