@@ -107,9 +107,9 @@ require_once('connection.php');
 
 		?>
 		
-		<input type="text" name="student_1" placeholder="Your student number"><br>
-		<input type="text" name="student_2" placeholder="Partner student number"><br>
-		<input type="text" name="team_name" placeholder="Team Name"><br>
+		<input type="text" name="student_1" placeholder="Your student number" required><br>
+		<input type="text" name="student_2" placeholder="Partner student number" required><br>
+		<input type="text" name="team_name" placeholder="Team Name" required><br>
 		<br>
 		<input type="submit" name="submit_team">
 	</form>
