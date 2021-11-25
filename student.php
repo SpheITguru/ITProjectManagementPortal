@@ -107,6 +107,10 @@ require_once('connection.php');
 
 		?>
 		<?php
+			$student = $_SESSION['student'];
+			$select_tm = mysqli_query($con," SELECT * FROM team WHERE student_1 = '$student' OR student_2 = '$student' ");
+			$row  = mysqli_fetch_array($select_tm);
+
 			if (empty($_SESSION['student'])) {
 		?>
 		<input type="text" name="student_1" placeholder="Your student number" required><br>
