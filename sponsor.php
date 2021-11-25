@@ -65,6 +65,17 @@ if(isset($_POST['submit_idea']))
 	
 	</div>
 	<!-- This is a comment for left table -->
+
+	<?php 
+	$email = $_SESSION['email']
+	$select = mysqli_query($con," SELECT * FROM team WHERE sponsor = '$email' ");
+	$row  = mysqli_fetch_array($select);
+
+	if(is_array($row)) {
+		$student1 = $row['student_1'];
+		echo $student1;
+	}
+	?>
     <h3>Project Team <?php echo $_SESSION['team']; ?></h3>
 	<table>
 			<tr>
