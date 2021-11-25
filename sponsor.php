@@ -85,7 +85,7 @@ if(isset($_POST['submit_idea']))
 		$student_lname1 = $row_user1['lname'];
 	}
 
-	$select_user2 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student1' ");
+	$select_user2 = mysqli_query($con," SELECT * FROM user WHERE ystudent = '$student2' ");
 	$row_user2  = mysqli_fetch_array($select_user2);
 
 	if(is_array($row_user2)) {
