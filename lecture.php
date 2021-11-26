@@ -150,19 +150,13 @@ require_once('connection.php');
 				<th>Task Name</th>
 				<th>Sponsor signiture</th>
 				<th>Lecture feedback</th>
-				<th>Document</th>
 			</tr>
 			<tr>
 				<td>Use Case</td>
 				<td>Approved</td>
 				<td>
-					<form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Redo</label>
-						<input type="submit" name="submit">
-					</form>
+					
 				</td>
-				<td>file</td>
 			</tr>
 		</table>
 	
