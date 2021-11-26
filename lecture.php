@@ -85,6 +85,7 @@ require_once('connection.php');
 		$student_name2 = $row_user2['fname'];
 		$student_lname2 = $row_user2['lname'];
 	}
+
 	?>
 
     <h3>Project Team <?php echo $tname; ?></h3>
@@ -105,10 +106,7 @@ require_once('connection.php');
 				<td><?php echo $student2;?></td>
 			</tr>
 		</table>
-	<h4>Project Idea</h4>
-    <form class="form-inline">
-		<textarea  name="project_description" placeholder="Project Description" rows="4" cols="45"></textarea>
-	</form>
+	
   </div>
   <div class="main">
     <h2>Search an Idea</h2>
