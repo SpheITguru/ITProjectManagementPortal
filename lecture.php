@@ -137,7 +137,6 @@ require_once('connection.php');
 			<div class="column">				
 				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $row_idea['idea_info']; ?></textarea>	
 				<br>
-				<input type="submit" name="submit">
 			</div>
 			<?php
 				}
