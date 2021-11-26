@@ -121,11 +121,12 @@ require_once('connection.php');
 	?>
 	<div class="row">
 		<form>
+		<div class="column">
 		<?php
 			if(is_array($row_idea)) {
 				echo $row_idea['approved_idea'];
 			?>
-	
+		</div>
 			<div class="column">				
 				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $row_idea['idea_info']; ?></textarea>	
 				<br>
