@@ -81,13 +81,7 @@ require_once('connection.php');
 	<div class="row">
 		<form>
 			<div class="column">
-				<div class="custom-select" style="width:200px;">
-					<select>
-						<option value="0">Select idea:</option>
-						<option value="1">Online Shopping</option>
-						<option value="2">Logistic</option>
-					</select>
-				</div>
+				
 				<input type="radio" id="student" name="users"><label for="student">Approve</label>
 				<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
 			
