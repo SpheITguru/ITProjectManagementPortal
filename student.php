@@ -185,26 +185,13 @@ require_once('connection.php');
 				<th>Task Name</th>
 				<th>Sponsor signiture</th>
 				<th>Lecture feedback</th>
-				<th>Document</th>
 			</tr>
 			<tr>
 				<td>Use Case</td>
 				<td>Approved</td>
 				<td>accept</td>
-				<td>file</td>
 			</tr>
-			<tr>
-				<td>Requirements</td>
-				<td>Approved</td>
-				<td>redo</td>
-				<td>file</td>
-			</tr>
-			<tr>
-				<td>Prototype</td>
-				<td>Panding</td>
-				<td>Panding</td>
-				<td>file</td>
-			</tr>
+			
 		</table>
 	
 	</div>
