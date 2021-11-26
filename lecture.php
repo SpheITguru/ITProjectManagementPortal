@@ -128,7 +128,7 @@ require_once('connection.php');
 				
 			?>
 		<tr>
-			<th><?php echo $row_idea['approved_idea']; ?></th>
+			<th><?php echo $row_idea['new_idea']; ?></th>
 		</tr>
 		
 		</table>
