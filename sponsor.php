@@ -159,43 +159,11 @@ if(isset($_POST['submit_idea']))
 		<table>
 			<tr>
 				<th>Task Name</th>
-				<th>Sponsor signiture</th>
-				<th>Lecture feedback</th>
-				<th>Document</th>
+				<th>Task status</th>
 			</tr>
 			<tr>
 				<td>Use Case</td>
-				<td><form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
-						<input type="submit" name="submit">
-					</form>
-				</td>
-				<td>accept</td>
-				<td><a href="#">Use Case</a></td>
-			</tr>
-			<tr>
-				<td>Requirements</td>
-				<td><form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
-						<input type="submit" name="submit">
-					</form>
-				</td>
-				<td>redo</td>
-				<td><a href="#">Requirements</a></td>
-			</tr>
-			<tr>
-				<td>Prototype</td>
-				<td><form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
-						<input type="submit" name="submit">
-					</form>
-				</td>
-				<td>Panding</td>
-				<td><a href="#">Prototype</a></td>
-			</tr>
+				<td>submitted</td>
 		</table>
 	
 	</div>
