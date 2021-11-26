@@ -178,13 +178,11 @@ require_once('connection.php');
 		<table>
 			<tr>
 				<th>Task Name</th>
-				<th>Sponsor signiture</th>
-				<th>Lecture feedback</th>
+				<th>Task status</th>
 			</tr>
 			<tr>
 				<td>Use Case</td>
-				<td>Approved</td>
-				<td>accept</td>
+				<td>submitted</td>
 			</tr>
 			
 		</table>
