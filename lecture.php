@@ -43,11 +43,7 @@ require_once('connection.php');
 	</div>
 	<br>
 	<div class="custom-select" style="width:200px;">
-		<select>
-			<option value="0">Select Team:</option>
-			<option value="1">Online Shopping</option>
-			<option value="2">Logistic</option>
-		</select>
+		
 	</div>
 	<!-- This is a comment for left table -->
     <h3>Team members</h3>
