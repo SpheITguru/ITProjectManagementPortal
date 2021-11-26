@@ -46,25 +46,66 @@ require_once('connection.php');
 		
 	</div>
 	<!-- This is a comment for left table -->
-    <h3>Team members</h3>
+
+	<?php 
+	$email = $_SESSION['email'];
+	$select = mysqli_query($con," SELECT * FROM team WHERE sponsor = '$email' ");
+	$row  = mysqli_fetch_array($select);
+
+	$student1 = "";
+	$student2 = "";
+	$tname = "";
+
+	if(is_array($row)) {
+		$student1 = $row['student_1'];
+		$student2 = $row['student_2'];
+		$tname = $row['tname'];
+	}
+ 
+	$select_user1 = mysqli_query($con," SELECT * FROM users WHERE ystudent = '$student1' ");
+	$row_user1  = mysqli_fetch_array($select_user1);
+
+
+	$student_name1 = "";
+	$student_lname1 = "";
+
+	if(is_array($row_user1)) {
+		$student_name1 = $row_user1['fname'];
+		$student_lname1 = $row_user1['lname'];
+	}
+
+	$select_user2 = mysqli_query($con," SELECT * FROM users WHERE ystudent = '$student2' ");
+	$row_user2  = mysqli_fetch_array($select_user2);
+
+
+	$student_name2 = "";
+	$student_lname2 = "";
+
+	if(is_array($row_user2)) {
+		$student_name2 = $row_user2['fname'];
+		$student_lname2 = $row_user2['lname'];
+	}
+	?>
+
+    <h3>Project Team <?php echo $tname; ?></h3>
 	<table>
-		<tr>
-			<th>Name</th>
-			<th>Surname</th>
-			<th>Student ID</th>
-		</tr>
-		<tr>
-			<td>Siphephelo</td>
-			<td>Mlungwana</td>
-			<td>21958988</td>
-		</tr>
-		<tr>
-			<td>Katleo</td>
-			<td>Rantle</td>
-			<td>21943569</td>
-		</tr>
-	</table>
-	<h4>Project Idea: Approved</h4>
+			<tr>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Student ID</th>
+			</tr>
+			<tr>
+				<td><?php echo $student_name1;?></td>
+				<td><?php echo $student_lname1;?></td>
+				<td><?php echo $student1;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $student_name2;?></td>
+				<td><?php echo $student_lname2;?></td>
+				<td><?php echo $student2;?></td>
+			</tr>
+		</table>
+	<h4>Project Idea</h4>
     <form class="form-inline">
 		<textarea  name="project_description" placeholder="Project Description" rows="4" cols="45"></textarea>
 	</form>
