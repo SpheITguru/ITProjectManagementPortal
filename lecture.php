@@ -164,30 +164,6 @@ require_once('connection.php');
 				</td>
 				<td>file</td>
 			</tr>
-			<tr>
-				<td>Requirements</td>
-				<td>Approved</td>
-				<td>
-					<form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Redo</label>
-						<input type="submit" name="submit">
-					</form>
-				</td>
-				<td>file</td>
-			</tr>
-			<tr>
-				<td>Prototype</td>
-				<td>Panding</td>
-				<td>
-					<form>
-						<input type="radio" id="student" name="users"><label for="student">Approve</label>
-						<input type="radio" id="student" name="users"><label for="student">Redo</label>
-						<input type="submit" name="submit">
-					</form>
-				</td>
-				<td>file</td>
-			</tr>
 		</table>
 	
 	</div>
