@@ -122,10 +122,17 @@ require_once('connection.php');
 	<div class="row">
 		<form>
 		<div class="column">
-		<?php
+		<table>
+			<?php
 			if(is_array($row_idea)) {
-				echo $row_idea['approved_idea'];
+				
 			?>
+		<tr>
+			<th><?php echo $row_idea['approved_idea']; ?></th>
+		</tr>
+		
+		</table>
+		
 		</div>
 			<div class="column">				
 				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $row_idea['idea_info']; ?></textarea>	
@@ -154,9 +161,7 @@ require_once('connection.php');
 			<tr>
 				<td>Use Case</td>
 				<td>Approved</td>
-				<td>
-					
-				</td>
+				<td></td>
 			</tr>
 		</table>
 	
