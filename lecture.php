@@ -115,12 +115,7 @@ require_once('connection.php');
 	<!-- This is a comment for column -->
 	<div class="row">
 		<form>
-			<div class="column">
-				
-				<input type="radio" id="student" name="users"><label for="student">Approve</label>
-				<input type="radio" id="student" name="users"><label for="student">Disapprove</label>
-			
-			</div>
+	
 			<div class="column">				
 				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $_SESSION['email']; ?></textarea>	
 				<br>
