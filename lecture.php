@@ -113,14 +113,27 @@ require_once('connection.php');
     <h5>Nov , 2021, <?php echo "Today is " . date("l");?></h5>
     <div class="fakeimg" style="height:200px;">
 	<!-- This is a comment for column -->
+	<?php
+
+			$select_idea = mysqli_query($con,"SELECT * FROM `ideas` WHERE approved_idea is not NULL");
+			$row_idea  = mysqli_fetch_array($select_idea);
+		
+	?>
 	<div class="row">
 		<form>
+		<?php
+			if(is_array($row_idea)) {
+				echo $row_idea['approved_idea'];
+			?>
 	
 			<div class="column">				
-				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $_SESSION['email']; ?></textarea>	
+				<textarea  name="project_description" placeholder="Project Description" rows="8" cols="70"><?php echo $row_idea['idea_info']; ?></textarea>	
 				<br>
 				<input type="submit" name="submit">
 			</div>
+			<?php
+				}
+			?>
 		</form>
 	</div>
 	<!-- This is a comment for column -->
